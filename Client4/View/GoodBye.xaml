@@ -1,0 +1,15 @@
+﻿<Page x:Class="Client4.View.GoodBye"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Client4.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="400"
+      Title="GoodBye">
+
+    <Grid Background="White">
+        <TextBlock FontSize="40" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,0" TextWrapping="Wrap" Text="안녕히 가십시오" VerticalAlignment="Center"/>
+
+    </Grid>
+</Page>

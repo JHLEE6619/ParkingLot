@@ -1,0 +1,182 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Sockets;
+using System.Net;
+using System.Text;
+using System.Threading.Tasks;
+using MySqlConnector;
+using Server.Model;
+using Newtonsoft.Json;
+
+namespace Server.Controller
+{
+    public class MainServer
+    {
+
+        public DBC Dbc {get;set;}
+        public enum MsgId
+        {
+            ENTRY_RECORD, PAYMENT, REGISTRATION, PERIOD_EXTENSION, INIT_PARKING_LIST
+        }
+
+        public async Task StartMainServer()
+        {
+            TcpListener listener = new TcpListener(IPAddress.Any, 10000);
+            Console.WriteLine(" 메인서버 시작 ");
+            listener.Start();
+            while (true)
+            {
+                TcpClient clnt =
+                    await listener.AcceptTcpClientAsync().ConfigureAwait(false);
+
+                Task.Run(() => ServerMainAsync(clnt));
+            }
+        }
+
+        private async Task ServerMainAsync(TcpClient clnt)
+        {
+            DBC dbc = new();
+            this.Dbc = dbc;
+            Console.WriteLine("DB 연결");
+            byte[] buf = new byte[1024];
+            Receive_msg msg;
+            NetworkStream stream = clnt.GetStream();
+            while (true)
+            {
+                int len = await stream.ReadAsync(buf).ConfigureAwait(false);
+                string json = Encoding.UTF8.GetString(buf);
+                msg = JsonConvert.DeserializeObject<Receive_msg>(json);
+                handler(msg, stream);
+                
+            }
+        }
+
+        private void handler(Receive_msg rcv_msg, NetworkStream stream)
+        {
+            Send_msg send_msg = new();
+            switch (rcv_msg.MsgId)
+            {
+                // 사전 / 출차 정산
+                case (byte)MsgId.ENTRY_RECORD:
+                    send_msg = Show_entryRecord(rcv_msg);
+                    break;
+                // 사전 / 출차 정산
+                case (byte)MsgId.PAYMENT:
+                    Show_paymentInfo(rcv_msg);
+                    break;
+                case (byte)MsgId.REGISTRATION:
+                    Dbc.Insert_regInfo(rcv_msg.User);
+                    break;
+                case (byte)MsgId.PERIOD_EXTENSION:
+                    Dbc.Update_regInfo(rcv_msg.User);
+                    break;
+                case (byte)MsgId.INIT_PARKING_LIST:
+                    send_msg = Send_all_record();
+                    break;
+            }
+            Send_messageAsync(send_msg, stream);
+        }
+
+
+        private async Task Send_messageAsync(Send_msg msg, NetworkStream stream)
+        {
+            string json = JsonConvert.SerializeObject(msg);
+            byte[] buf = Encoding.UTF8.GetBytes(json);
+            await stream.WriteAsync(buf).ConfigureAwait(false);
+        }
+
+        private Send_msg Show_entryRecord(Receive_msg rcv_msg)
+        {
+            byte cls = Dbc.Select_expDate(rcv_msg.Record.VehicleNum);
+            Dbc.Insert_Entry_record(cls, rcv_msg.Record.VehicleNum);
+            Entry_exit_record record = Dbc.Select_record(rcv_msg.Record.VehicleNum);
+            string entry_date = Date_to_str(record.EntryDate);
+            Send_msg send_msg = new()
+            {
+                MsgId = (byte)MsgId.ENTRY_RECORD,
+                Record = new()
+                {
+                    VehicleNum = record.VehicleNum,
+                    EntryDate = entry_date,
+                    Classification = record.Classification
+                }
+            };
+
+            return send_msg;
+        }
+
+        private Send_msg Show_paymentInfo(Receive_msg rcv_msg)
+        {
+            Entry_exit_record record = Dbc.Select_record(rcv_msg.Record.VehicleNum);
+
+            string entry_date = Date_to_str(record.EntryDate);
+            DateTime now = DateTime.Now;
+            string exit_Date = Date_to_str(now);
+            int parkingTime = dif_date(record.EntryDate, now);
+            string parking_time = parkingTime + "분";
+            int totalFee = Cal_totalFee(parkingTime);
+            string total_fee = totalFee.ToString() + "원";
+            // 같은 시점에서 업데이트하면 안되고, 결제하는 시점으로 바뀌어야함
+            Dbc.Update_exitRecord(rcv_msg.Record.VehicleNum, now, totalFee);
+            Send_msg send_msg = new()
+            {
+                MsgId = (byte)MsgId.PAYMENT,
+                Record = new()
+                {
+                    VehicleNum = record.VehicleNum,
+                    EntryDate = entry_date,
+                    Classification = record.Classification,
+                    ExitDate = exit_Date,
+                    ParkingTime = parking_time,
+                    TotalFee = total_fee
+                }
+            };
+
+            return send_msg;
+        }
+
+        private Send_msg Send_all_record()
+        {
+            List<Entry_exit_record> recordList = Dbc.Select_all_record();
+            List<Record> parkingList = [];
+            foreach(var record in recordList)
+            {
+                Record park = new()
+                {
+                    VehicleNum = record.VehicleNum,
+                    EntryDate = Date_to_str(record.EntryDate),
+                    Classification = record.Classification
+                };
+                parkingList.Add(park);
+            }
+
+            Send_msg send_msg = new()
+            {
+                MsgId = (byte)MsgId.INIT_PARKING_LIST,
+                ParkingList = parkingList
+            };
+
+            return send_msg;
+        }
+
+        private int dif_date(DateTime entryDate, DateTime exitDate)
+        {
+            TimeSpan timeDiff = entryDate - exitDate;
+            int min = (int)timeDiff.TotalMinutes;
+            return min;
+        }
+
+        private int Cal_totalFee(int parkingTime)
+        {
+            int totalFee = (Fee.fee * parkingTime / 10);
+            return totalFee;
+        }
+
+        public string Date_to_str(DateTime dateTime)
+        {
+            string dateForamt = "MM월 dd일 HH시 mm분";
+            return dateTime.ToString(dateForamt);
+        }
+    }
+}

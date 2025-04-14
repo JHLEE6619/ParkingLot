@@ -1,0 +1,54 @@
+﻿<Page x:Class="Client3.View.Period_Extension"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Client3.View"
+      mc:Ignorable="d" 
+      xmlns:vm="clr-namespace:Client3.ViewModel"
+      d:DesignHeight="550" d:DesignWidth="500"
+      Title="Period_Extension">
+    
+    <Page.DataContext>
+        <vm:VM_Registration/>
+    </Page.DataContext>
+
+    <Grid Background="White">
+        <Grid Margin="40,100,40,50" Background="#FFCACACA">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="[차량 번호]" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
+                VerticalAlignment="Center" Margin="20,0,0,0" />
+            <TextBox Text="{Binding User.VehicleNum, Mode=TwoWay}" Grid.Row="1" Width="200" Height="30" FontSize="18" HorizontalAlignment="Left"
+                VerticalAlignment="Center" Margin="20,0,0,0"/>
+            <TextBlock Grid.Row="2" Text="[비밀번호]" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
+                VerticalAlignment="Center" Margin="20,0,0,0" />
+            <TextBox Text="{Binding User.Pw, Mode=TwoWay}" Grid.Row="3" Width="200" Height="30" FontSize="18" HorizontalAlignment="Left"
+                VerticalAlignment="Center" Margin="20,0,0,0"/>
+            <TextBlock Grid.Row="4" Text="[등록 기간]" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
+                VerticalAlignment="Center" Margin="20,0,0,0" />
+            <ComboBox x:Name="Combox_regDate" ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" Grid.Row="5" Grid.ColumnSpan="2" Width="310" Height="30" FontSize="18" HorizontalAlignment="Left"
+                VerticalAlignment="Center" Margin="20,0,0,0" SelectionChanged="Combox_select">
+            </ComboBox>
+            <TextBlock Text="{Binding User.Fee}" Grid.Row="6" FontSize="18" FontWeight="bold" HorizontalAlignment="Right"
+                VerticalAlignment="Center" Margin="0,0,20,0" TextWrapping="Wrap" />
+            <Button Command="{Binding Registration}" x:Name="Btn_Payment" Visibility="Collapsed" Grid.Column="1" Grid.Row="7" Content="결제하기" FontSize="18"
+            HorizontalAlignment="Left" VerticalAlignment="Center" Width="80" Height="30" Margin="20,0,0,0" Click="Btn_Payment_Click" />
+        </Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="30,30,0,0" TextWrapping="Wrap" Text="정기 차량 기간 연장" VerticalAlignment="Top"
+        FontSize="24" FontWeight="Bold"/>
+    </Grid>
+</Page>

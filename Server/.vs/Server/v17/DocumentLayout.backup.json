@@ -1,0 +1,134 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Server\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6B8416FD-E553-4122-8A67-14A5CBC87550}|Server.csproj|c:\\users\\lms\\desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\server\\model\\send_msg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B8416FD-E553-4122-8A67-14A5CBC87550}|Server.csproj|solutionrelative:model\\send_msg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B8416FD-E553-4122-8A67-14A5CBC87550}|Server.csproj|c:\\users\\lms\\desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\server\\model\\record.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B8416FD-E553-4122-8A67-14A5CBC87550}|Server.csproj|solutionrelative:model\\record.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B8416FD-E553-4122-8A67-14A5CBC87550}|Server.csproj|c:\\users\\lms\\desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\server\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B8416FD-E553-4122-8A67-14A5CBC87550}|Server.csproj|solutionrelative:model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B8416FD-E553-4122-8A67-14A5CBC87550}|Server.csproj|c:\\users\\lms\\desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\server\\model\\receive_msg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B8416FD-E553-4122-8A67-14A5CBC87550}|Server.csproj|solutionrelative:model\\receive_msg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B8416FD-E553-4122-8A67-14A5CBC87550}|Server.csproj|c:\\users\\lms\\desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B8416FD-E553-4122-8A67-14A5CBC87550}|Server.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B8416FD-E553-4122-8A67-14A5CBC87550}|Server.csproj|c:\\users\\lms\\desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\server\\controller\\mainserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B8416FD-E553-4122-8A67-14A5CBC87550}|Server.csproj|solutionrelative:controller\\mainserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B8416FD-E553-4122-8A67-14A5CBC87550}|Server.csproj|c:\\users\\lms\\desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\server\\controller\\dbc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B8416FD-E553-4122-8A67-14A5CBC87550}|Server.csproj|solutionrelative:controller\\dbc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 196,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Send_msg.cs",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Server\\Model\\Send_msg.cs",
+              "RelativeDocumentMoniker": "Model\\Send_msg.cs",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Server\\Model\\Send_msg.cs",
+              "RelativeToolTip": "Model\\Send_msg.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T10:09:18.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Server\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Server\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T10:06:10.172Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainServer.cs",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Server\\Controller\\MainServer.cs",
+              "RelativeDocumentMoniker": "Controller\\MainServer.cs",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Server\\Controller\\MainServer.cs",
+              "RelativeToolTip": "Controller\\MainServer.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAE0AAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T07:50:13.772Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Receive_msg.cs",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Server\\Model\\Receive_msg.cs",
+              "RelativeDocumentMoniker": "Model\\Receive_msg.cs",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Server\\Model\\Receive_msg.cs",
+              "RelativeToolTip": "Model\\Receive_msg.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T07:19:16.922Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Record.cs",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Server\\Model\\Record.cs",
+              "RelativeDocumentMoniker": "Model\\Record.cs",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Server\\Model\\Record.cs",
+              "RelativeToolTip": "Model\\Record.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T07:19:05.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Server\\Model\\User.cs",
+              "RelativeDocumentMoniker": "Model\\User.cs",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Server\\Model\\User.cs",
+              "RelativeToolTip": "Model\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T07:18:59.235Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DBC.cs",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Server\\Controller\\DBC.cs",
+              "RelativeDocumentMoniker": "Controller\\DBC.cs",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Server\\Controller\\DBC.cs",
+              "RelativeToolTip": "Controller\\DBC.cs",
+              "ViewState": "AgIAAJQAAAAAAAAAAAArwJUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T05:07:40.959Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+C:\Users\LMS\Desktop\주차관리시스템\bin\windows-x86_64\anprCsharpDotnet1.exe.config
+C:\Users\LMS\Desktop\주차관리시스템\bin\windows-x86_64\anprCsharpDotnet1.exe
+C:\Users\LMS\Desktop\주차관리시스템\bin\windows-x86_64\anprCsharpDotnet1.pdb
+C:\Users\LMS\Desktop\주차관리시스템\examples\csharp\anprCsharpDotnet1\obj\Debug\anprCsharpDotnet1.csproj.AssemblyReference.cache
+C:\Users\LMS\Desktop\주차관리시스템\examples\csharp\anprCsharpDotnet1\obj\Debug\anprCsharpDotnet1.csproj.CoreCompileInputs.cache
+C:\Users\LMS\Desktop\주차관리시스템\examples\csharp\anprCsharpDotnet1\obj\Debug\anprCsharpDotnet1.exe
+C:\Users\LMS\Desktop\주차관리시스템\examples\csharp\anprCsharpDotnet1\obj\Debug\anprCsharpDotnet1.pdb
+C:\Users\LMS\Desktop\주차관리시스템\examples\bin\windows-x86_64\anprCsharpDotnet1.exe.config
+C:\Users\LMS\Desktop\주차관리시스템\examples\bin\windows-x86_64\anprCsharpDotnet1.exe
+C:\Users\LMS\Desktop\주차관리시스템\examples\bin\windows-x86_64\anprCsharpDotnet1.pdb
+C:\Users\LMS\Desktop\주차관리시스템\examples\csharp\anprCsharpDotnet1\anprCsharpDotnet1\obj\Debug\anprCsharpDotnet1.csproj.AssemblyReference.cache
+C:\Users\LMS\Desktop\주차관리시스템\examples\csharp\anprCsharpDotnet1\anprCsharpDotnet1\obj\Debug\anprCsharpDotnet1.csproj.CoreCompileInputs.cache
+C:\Users\LMS\Desktop\주차관리시스템\examples\csharp\anprCsharpDotnet1\anprCsharpDotnet1\obj\Debug\anprCsharpDotnet1.exe
+C:\Users\LMS\Desktop\주차관리시스템\examples\csharp\anprCsharpDotnet1\anprCsharpDotnet1\obj\Debug\anprCsharpDotnet1.pdb
