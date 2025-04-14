@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|c:\\users\\lms\\desktop\\parkinglot\\client1\\viewmodel\\network.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|solutionrelative:viewmodel\\network.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|c:\\users\\lms\\desktop\\parkinglot\\client1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
@@ -18,8 +22,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Network.cs",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client1\\ViewModel\\Network.cs",
+              "RelativeDocumentMoniker": "ViewModel\\Network.cs",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client1\\ViewModel\\Network.cs",
+              "RelativeToolTip": "ViewModel\\Network.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T07:42:14.792Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -28,14 +45,14 @@
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client1\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAACQAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAiwFkAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-10T08:14:56.683Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client1\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",

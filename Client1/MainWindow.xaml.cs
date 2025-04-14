@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.IO;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -23,6 +24,8 @@ public partial class MainWindow : System.Windows.Window
     private VideoCapture video_entrance;
     private VideoCapture video_exit;
     public Network network;
+    uint imgId = 0;
+    object lockobj = new();
 
     public MainWindow()
     {
@@ -70,7 +73,7 @@ public partial class MainWindow : System.Windows.Window
                 // 이미지 바이너리 데이터 생성
                 Cv2.ImEncode(".jpg", matImage, out byte[] imgData);
                 // 서버 전송 메서드
-                Send_img(imgData);                 
+                Send_img(imgData, msgId);                 
                 captureTimer.Restart(); // 타이머 리셋
             }
             Thread.Sleep(1);
@@ -78,8 +81,47 @@ public partial class MainWindow : System.Windows.Window
         video.Release(); // 비디오가 끝나면 닫기
     }
 
-    private void Send_img(byte[] imgData)
+    private void Send_img(byte[] imgData, byte msgId)
     {
+        long imgSize = imgData.Length; // 이미지 사이즈
+        byte[] imgType = [msgId]; // 이미지 타입(0 : 입구 , 1 : 출구, 2 : 주차장)
+        int headerSize = sizeof(uint) + sizeof(long) + sizeof(byte);
+        byte[] serializedData; // 바이트 배열 컨버트용 버퍼
+        byte[] buf = new byte[1024]; // 송신 버퍼
+        int offset = 0; // 송신 버퍼용 오프셋
+        int readSize = buf.Length - headerSize;
+        int readOffset = 0; // 이미지 읽기용 오프셋
 
+        while (imgSize > 0)
+        {
+            // 이미지 식별자
+            serializedData = BitConverter.GetBytes(imgId);
+            Array.Copy(serializedData, 0, buf, offset, serializedData.Length);
+            offset += sizeof(int);
+
+            // 이미지 크기
+            serializedData = BitConverter.GetBytes(imgSize);
+            Array.Copy(serializedData, 0, buf, offset, serializedData.Length);
+            offset += sizeof(long);
+
+            // 이미지 타입(0 : 입구 , 1 : 출구, 2 : 주차장)
+            Array.Copy(imgType, 0, buf, offset, imgType.Length);
+            offset += imgType.Length;
+
+            // 이미지 데이터
+            if (imgSize < readSize) readSize = (int)imgSize;
+            if (imgData == null) break;
+            Array.Copy(imgData, 0, buf, offset, imgData.Length);
+            network.Stream.Write(buf, 0, offset + imgData.Length); // 정확한 길이만큼 전송
+
+            imgSize -= readSize;
+            readOffset += readSize;
+            offset = 0;
+        }
+
+        lock (lockobj)
+        {
+            imgId++;
+        }
     }
 }
