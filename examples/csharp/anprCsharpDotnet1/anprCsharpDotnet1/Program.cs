@@ -46,11 +46,10 @@ namespace anprCsharpDotnet1
       return str;
     }
 
-    static void readFile(string imgfile, string outputFormat, string options)
+    static string readFile(string imgfile, string outputFormat, string options)
     {
-      Console.Write("{0} (outputFormat=\"{1}\", options=\"{2}\") => ", imgfile, outputFormat, options);
       IntPtr result = anpr_read_file(imgfile, outputFormat, options);
-      Console.WriteLine(ptrToUtf8(result));
+      return ptrToUtf8(result);
     }
     
     static void readPixels(string imgfile, string outputFormat, string options)
@@ -74,7 +73,8 @@ namespace anprCsharpDotnet1
     static void anprDemo1(string outputFormat)
     {
       // anpr
-      readFile(IMG_PATH + "23781_22117_754.jpg", outputFormat, "dm");
+      var result = readFile(@"C:\\Users\\LMS\\Desktop\\video\\번호판test.png", outputFormat, "");
+      Console.WriteLine(result);
      /* readFile(IMG_PATH + "licensePlate.jpg", outputFormat, "");
       readFile(IMG_PATH + "multiple.jpg", outputFormat, "vm");
       readFile(IMG_PATH + "multiple.jpg", outputFormat, "");
@@ -100,29 +100,36 @@ namespace anprCsharpDotnet1
       readPixels(IMG_PATH + "surround.jpg", outputFormat, "dmsr");
     }
 
-    static void Main(string[] args)
-    {
-      Console.OutputEncoding = System.Text.Encoding.UTF8;
+        static void Main(string[] args)
+        {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-      IntPtr ptr = anpr_initialize("text");
-      string error = ptrToUtf8(ptr);
-      if (error != "")
-      {
-        Console.WriteLine(error);
-        return;
-      }
+            IntPtr ptr = anpr_initialize("text");
+            string error = ptrToUtf8(ptr);
+            if (error != "")
+            {
+                Console.WriteLine(error);
+                return;
+            }
 
-      anprDemo1("json");
-      /*anprDemo1("json");
-      anprDemo1("yaml");
-      anprDemo1("xml");
-      anprDemo1("csv");
+            var result = readFile(@"C:\\Users\\LMS\\Desktop\\video\\번호판test.png", "json", "");
+            string vehicleNum = Extract_VehicleNum(result);
+            Console.WriteLine(vehicleNum);
+        }
+        
+        private static string Extract_VehicleNum(string result)
+        {
+            string text = "\"text\": ";
+            int idx = result.IndexOf(text);
+            int num_idx = idx + text.Length + 1;
+            string vehicleNum = "";
+            for (int i = num_idx; i < result.Length; i++)
+            {
+                if (result[i] == '"') break;
+                vehicleNum += result[i];
+            }
 
-      anprDemo2("text");
-      anprDemo2("json");
-      anprDemo2("yaml");
-      anprDemo2("xml");
-      anprDemo2("csv");*/
-    }
+            return vehicleNum;
+        }
   }
 }

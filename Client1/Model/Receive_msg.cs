@@ -13,5 +13,6 @@ namespace Client1.Model
         public User User { get; set; }
         public Record Record { get; set; }
         public List<Record> ParkingList { get; set; }
+        public List<List<int>> SeatInfo { get; set; }
     }
 }

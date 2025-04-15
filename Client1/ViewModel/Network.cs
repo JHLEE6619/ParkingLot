@@ -6,6 +6,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Interop;
 using Client1.Model;
 using Newtonsoft.Json;
 
@@ -20,7 +21,7 @@ namespace Client1.ViewModel
 
         public enum MsgId
         {
-            ENTRY_RECORD, PAYMENT, REGISTRATION, PERIOD_EXTENSION, INIT_PARKING_LIST, ENTER_VEHICLE, EXIT_VEHICLE
+            ENTRY_RECORD, PAYMENT, REGISTRATION, PERIOD_EXTENSION, INIT_PARKING_LIST, ENTER_VEHICLE, EXIT_VEHICLE, SEAT_INFO
         }
 
         public Network(Window window)
@@ -75,10 +76,7 @@ namespace Client1.ViewModel
                 {
                     int len = Stream.Read(buf, 0, buf.Length);
                     msg = Deserialize_to_json(buf, len);
-                    this.Window.Dispatcher.BeginInvoke(() =>
-                    {
-                        Record.Add(msg.Record);
-                    });
+                    Handler(msg);
                 }
             }
             catch
@@ -86,6 +84,27 @@ namespace Client1.ViewModel
                 Stream.Close();
                 Clnt.Close();
             }
+        }
+
+        private void Handler(Receive_msg msg)
+        {
+            switch (msg.MsgId)
+            {
+                case (byte)MsgId.ENTRY_RECORD:
+                    Update_record(msg);
+                    break;
+                case (byte)MsgId.SEAT_INFO:
+
+                    break;
+            }
+        }
+
+        private void Update_record(Receive_msg msg)
+        {
+            this.Window.Dispatcher.BeginInvoke(() =>
+            {
+                Record.Add(msg.Record);
+            });
         }
     }
 }

@@ -13,3 +13,21 @@ C:\Users\LMS\Desktop\주차관리 시스템\test\obj\Debug\net8.0\refint\test.dl
 C:\Users\LMS\Desktop\주차관리 시스템\test\obj\Debug\net8.0\test.pdb
 C:\Users\LMS\Desktop\주차관리 시스템\test\obj\Debug\net8.0\test.genruntimeconfig.cache
 C:\Users\LMS\Desktop\주차관리 시스템\test\obj\Debug\net8.0\ref\test.dll
+C:\Users\LMS\Desktop\ParkingLot\test\bin\Debug\net8.0\test.exe
+C:\Users\LMS\Desktop\ParkingLot\test\bin\Debug\net8.0\test.deps.json
+C:\Users\LMS\Desktop\ParkingLot\test\bin\Debug\net8.0\test.runtimeconfig.json
+C:\Users\LMS\Desktop\ParkingLot\test\bin\Debug\net8.0\test.dll
+C:\Users\LMS\Desktop\ParkingLot\test\bin\Debug\net8.0\test.pdb
+C:\Users\LMS\Desktop\ParkingLot\test\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\LMS\Desktop\ParkingLot\test\obj\Debug\net8.0\test.csproj.AssemblyReference.cache
+C:\Users\LMS\Desktop\ParkingLot\test\obj\Debug\net8.0\test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LMS\Desktop\ParkingLot\test\obj\Debug\net8.0\test.AssemblyInfoInputs.cache
+C:\Users\LMS\Desktop\ParkingLot\test\obj\Debug\net8.0\test.AssemblyInfo.cs
+C:\Users\LMS\Desktop\ParkingLot\test\obj\Debug\net8.0\test.csproj.CoreCompileInputs.cache
+C:\Users\LMS\Desktop\ParkingLot\test\obj\Debug\net8.0\test.sourcelink.json
+C:\Users\LMS\Desktop\ParkingLot\test\obj\Debug\net8.0\test.csproj.Up2Date
+C:\Users\LMS\Desktop\ParkingLot\test\obj\Debug\net8.0\test.dll
+C:\Users\LMS\Desktop\ParkingLot\test\obj\Debug\net8.0\refint\test.dll
+C:\Users\LMS\Desktop\ParkingLot\test\obj\Debug\net8.0\test.pdb
+C:\Users\LMS\Desktop\ParkingLot\test\obj\Debug\net8.0\test.genruntimeconfig.cache
+C:\Users\LMS\Desktop\ParkingLot\test\obj\Debug\net8.0\ref\test.dll
