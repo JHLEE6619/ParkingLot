@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Client3\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C0CB6562-F516-45CC-A759-1E7FF75D3946}|Client3.csproj|c:\\users\\lms\\desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\client3\\model\\receive_msg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0CB6562-F516-45CC-A759-1E7FF75D3946}|Client3.csproj|solutionrelative:model\\receive_msg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C0CB6562-F516-45CC-A759-1E7FF75D3946}|Client3.csproj|c:\\users\\lms\\desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\client3\\view\\prepayment.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{C0CB6562-F516-45CC-A759-1E7FF75D3946}|Client3.csproj|solutionrelative:view\\prepayment.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -50,11 +54,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "Receive_msg.cs",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Client3\\Model\\Receive_msg.cs",
+              "RelativeDocumentMoniker": "Model\\Receive_msg.cs",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Client3\\Model\\Receive_msg.cs",
+              "RelativeToolTip": "Model\\Receive_msg.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-08T00:42:51.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Command.cs",
               "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Client3\\ViewModel\\Commands\\Command.cs",
               "RelativeDocumentMoniker": "ViewModel\\Commands\\Command.cs",
@@ -62,12 +79,11 @@
               "RelativeToolTip": "ViewModel\\Commands\\Command.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAB4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T10:16:05.594Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T10:16:05.594Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Registration.xaml.cs",
               "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Client3\\View\\Registration.xaml.cs",
               "RelativeDocumentMoniker": "View\\Registration.xaml.cs",
@@ -75,12 +91,11 @@
               "RelativeToolTip": "View\\Registration.xaml.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T10:00:02.011Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T10:00:02.011Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "PrePayment.xaml.cs",
               "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Client3\\View\\PrePayment.xaml.cs",
               "RelativeDocumentMoniker": "View\\PrePayment.xaml.cs",
@@ -92,7 +107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Period_Extension.xaml.cs",
               "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Client3\\View\\Period_Extension.xaml.cs",
               "RelativeDocumentMoniker": "View\\Period_Extension.xaml.cs",
@@ -104,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Payment.xaml.cs",
               "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Client3\\View\\Payment.xaml.cs",
               "RelativeDocumentMoniker": "View\\Payment.xaml.cs",
@@ -116,7 +131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Payment.xaml",
               "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Client3\\View\\Payment.xaml",
               "RelativeDocumentMoniker": "View\\Payment.xaml",
@@ -127,7 +142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "VM_Registration.cs",
               "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Client3\\ViewModel\\VM_Registration.cs",
               "RelativeDocumentMoniker": "ViewModel\\VM_Registration.cs",
@@ -139,7 +154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Network.cs",
               "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Client3\\ViewModel\\Network.cs",
               "RelativeDocumentMoniker": "ViewModel\\Network.cs",
@@ -147,12 +162,11 @@
               "RelativeToolTip": "ViewModel\\Network.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T08:28:22.381Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T08:28:22.381Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PrePayment.xaml",
               "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Client3\\View\\PrePayment.xaml",
               "RelativeDocumentMoniker": "View\\PrePayment.xaml",
@@ -164,7 +178,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "VM_PrePayment.cs",
               "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Client3\\ViewModel\\VM_PrePayment.cs",
               "RelativeDocumentMoniker": "ViewModel\\VM_PrePayment.cs",
@@ -172,8 +186,7 @@
               "RelativeToolTip": "ViewModel\\VM_PrePayment.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T04:50:43.137Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T04:50:43.137Z"
             }
           ]
         }

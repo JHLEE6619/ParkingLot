@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "F/85GyouPiQ=",
+  "dgSpecHash": "S0toeXkLz7Q=",
   "success": true,
-  "projectFilePath": "C:\\Users\\LMS\\Desktop\\주차관리 시스템\\Client3\\Client3.csproj",
+  "projectFilePath": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client3\\Client3.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LMS\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
     "C:\\Users\\LMS\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",

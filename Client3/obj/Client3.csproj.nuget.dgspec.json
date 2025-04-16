@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LMS\\Desktop\\주차관리 시스템\\Client3\\Client3.csproj": {}
+    "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client3\\Client3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LMS\\Desktop\\주차관리 시스템\\Client3\\Client3.csproj": {
+    "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client3\\Client3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LMS\\Desktop\\주차관리 시스템\\Client3\\Client3.csproj",
+        "projectUniqueName": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client3\\Client3.csproj",
         "projectName": "Client3",
-        "projectPath": "C:\\Users\\LMS\\Desktop\\주차관리 시스템\\Client3\\Client3.csproj",
+        "projectPath": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client3\\Client3.csproj",
         "packagesPath": "C:\\Users\\LMS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LMS\\Desktop\\주차관리 시스템\\Client3\\obj\\",
+        "outputPath": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client3\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
