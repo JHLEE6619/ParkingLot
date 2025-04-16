@@ -4,10 +4,15 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Client4.View"
+      xmlns:vm="clr-namespace:Client4.ViewModel"
       mc:Ignorable="d" 
       d:DesignHeight="400" d:DesignWidth="400"
       Title="Main">
 
+    <Page.DataContext>
+        <vm:VM_Main/>
+    </Page.DataContext>
+    
     <Grid Background="White">
         <TextBlock Margin="30" HorizontalAlignment="Left" VerticalAlignment="Top" Text="출구 정산" FontSize="24" FontWeight="Bold"></TextBlock>
         <Grid Background="#FFCACACA" Margin="30,80,30,80">
@@ -48,7 +53,20 @@
                 VerticalAlignment="Center" Margin="10,0,0,0" />
             <TextBlock Grid.Row="5" Grid.Column="1" TextWrapping="Wrap" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
                 VerticalAlignment="Center" Margin="10,0,0,0" />
+            <TextBlock Text="{Binding Record.VehicleNum, Mode=OneWay}" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
+                VerticalAlignment="Center" Margin="20,0,0,0" Grid.Column="1" Width="187" />
+            <TextBlock Text="{Binding Record.Classification, Mode=OneWay}" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
+                VerticalAlignment="Center" Margin="20,0,0,0" Grid.Column="1" Grid.Row="1" Width="187" />
+            <TextBlock Text="{Binding Record.EntryDate, Mode=OneWay}" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
+                VerticalAlignment="Center" Margin="20,0,0,0" Grid.Column="1" Grid.Row="2" Width="187" />
+            <TextBlock Text="{Binding Record.ExitDate, Mode=OneWay}" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
+                VerticalAlignment="Center" Margin="20,0,0,0" Grid.Column="1" Grid.Row="3" Width="187" />
+            <TextBlock Text="{Binding Record.ParkingTime, Mode=OneWay}" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
+                VerticalAlignment="Center" Margin="20,0,0,0" Grid.Column="1" Grid.Row="4" Width="187" />
+            <TextBlock Text="{Binding Record.TotalFee, Mode=OneWay}" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
+                VerticalAlignment="Center" Margin="20,0,0,0" Grid.Column="1" Grid.Row="4" Width="187" />
+            
         </Grid>
-        <Button FontSize="18" FontWeight="Bold" Width="340" Height="40" Content="결제하기" HorizontalAlignment="Center" Margin="0,330,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Btn_payment" FontSize="18" FontWeight="Bold" Width="340" Height="40" Content="결제하기" HorizontalAlignment="Center" Margin="0,330,0,0" VerticalAlignment="Top" Click="Btn_payment_Click"/>
     </Grid>
 </Page>

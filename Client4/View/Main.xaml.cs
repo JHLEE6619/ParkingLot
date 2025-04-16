@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Client4.ViewModel;
 
 namespace Client4.View
 {
@@ -22,7 +23,14 @@ namespace Client4.View
     {
         public Main()
         {
+            Network.main = this;
             InitializeComponent();
+        }
+
+        private void Btn_payment_Click(object sender, RoutedEventArgs e)
+        {
+            Payment payment = new();
+            this.NavigationService.Navigate(payment);
         }
     }
 }

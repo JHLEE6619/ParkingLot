@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "pd/i7EtmiMw=",
+  "dgSpecHash": "Q6n9MvISTKg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\LMS\\Desktop\\주차관리 시스템\\Client4\\Client4.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client4\\Client4.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\LMS\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

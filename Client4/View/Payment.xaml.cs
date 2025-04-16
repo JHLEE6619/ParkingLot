@@ -23,6 +23,9 @@ namespace Client4.View
         public Payment()
         {
             InitializeComponent();
+            Thread.Sleep(3000);
+            GoodBye goodBye = new();
+            this.NavigationService.Navigate(goodBye);
         }
     }
 }

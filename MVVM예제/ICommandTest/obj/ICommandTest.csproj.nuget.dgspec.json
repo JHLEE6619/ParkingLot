@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LMS\\Desktop\\주차관리 시스템\\MVVM예제\\ICommandTest\\ICommandTest.csproj": {}
+    "C:\\Users\\LMS\\Desktop\\ParkingLot\\MVVM예제\\ICommandTest\\ICommandTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LMS\\Desktop\\주차관리 시스템\\MVVM예제\\ICommandTest\\ICommandTest.csproj": {
+    "C:\\Users\\LMS\\Desktop\\ParkingLot\\MVVM예제\\ICommandTest\\ICommandTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LMS\\Desktop\\주차관리 시스템\\MVVM예제\\ICommandTest\\ICommandTest.csproj",
+        "projectUniqueName": "C:\\Users\\LMS\\Desktop\\ParkingLot\\MVVM예제\\ICommandTest\\ICommandTest.csproj",
         "projectName": "ICommandTest",
-        "projectPath": "C:\\Users\\LMS\\Desktop\\주차관리 시스템\\MVVM예제\\ICommandTest\\ICommandTest.csproj",
+        "projectPath": "C:\\Users\\LMS\\Desktop\\ParkingLot\\MVVM예제\\ICommandTest\\ICommandTest.csproj",
         "packagesPath": "C:\\Users\\LMS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LMS\\Desktop\\주차관리 시스템\\MVVM예제\\ICommandTest\\obj\\",
+        "outputPath": "C:\\Users\\LMS\\Desktop\\ParkingLot\\MVVM예제\\ICommandTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

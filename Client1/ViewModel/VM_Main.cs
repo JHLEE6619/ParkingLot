@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,21 +19,20 @@ namespace Client1.ViewModel
         // 클라이언트는 항상 read 대기상태 -> 스레드 생성
 
         // 시작 시 -> 주차 차량 리스트 요청
-        public Network Network { get; set; }
-        // public Command Cmd{ get; set; }
+        public ObservableCollection<Record> Record { get; set; } = [];
+        public ObservableCollection<Brush> Color { get; set; } = [];
         public VM_Main() 
         {
-            // Cmd = new Command(method);
-            // Network = new();
+            Init_color();
         }
 
-        /*
-        public void method()
+        private void Init_color()
         {
-
+            const int seat_cnt = 21;
+            for (int i = 0; i < seat_cnt; i++)
+            {
+                Color.Add(Brushes.Aqua);
+            }
         }
-        */
-
-        
     }
 }

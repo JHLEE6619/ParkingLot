@@ -8,14 +8,29 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Server.Model;
 using System.IO;
+using anprCsharpDotnet1;
 
 namespace Server.Controller
 {
-    public class FileReceiveServer
+    public class FileReceiveServer : Date
     {
+        public Dictionary<int, int> ImgOffset { get; set; } = [];
+        public DBC Dbc { get; set; }
+        public Dictionary<byte, NetworkStream> Clients { get; set; } = [];
+
+        enum MsgId
+        {
+            ENTRY_RECORD = 0, PAYMENT = 1, ENTER_VEHICLE = 5, EXIT_VEHICLE = 6,
+        }
+        enum Vehicle_class
+        {
+            Normal, PrePayment, Registration
+        }
+
         public async Task StartFileRcvServer()
         {
             TcpListener listener = new TcpListener(IPAddress.Any, 10001);
+            this.Dbc = new();
             Console.WriteLine(" 파일 전송서버 시작 ");
             listener.Start();
             while (true)
@@ -30,55 +45,57 @@ namespace Server.Controller
         // 클라이언트 별로 다른 스레드가 실행하는 메소드
         private async Task ServerMain(Object client)
         {
-            // 헤더 : 이미지식별자(int), 이미지 크기(int), 이미지 유형(byte) 
-            // 바디 : 이미지 binary 데이터
-            Console.WriteLine(" 클라이언트 연결됨 ");
+            // 연결됨과 동시에 클라이언트에서 1바이트를보낸다.
+            // 1바이트 수신 : 1 -> Client1, 4 -> Client4
+            TcpClient tc = (TcpClient)client;
+            NetworkStream stream = tc.GetStream(); // Client1, Client4가 연결됨
             byte[] buf = new byte[1024];
-            int imgId;
+            Console.WriteLine(" 클라이언트 연결됨 ");
+            await stream.ReadAsync(buf, 0, 1).ConfigureAwait(false);
+            Clients.Add(buf[0], stream);
+
+
+                // 헤더 : 이미지식별자(int), 이미지 크기(int), 이미지 유형(byte) 
+                // 바디 : 이미지 binary 데이터
+                int imgId;
             long imgSize;
             byte imgType;
             byte[] imgBinary;
             int offset = 0;
-            TcpClient tc = (TcpClient)client;
-            NetworkStream stream = tc.GetStream();
-
-            Dictionary<int, int> imgOffset = [];
-
-            int num = 0;
             while (true)
             {
                 int received = 0, len;
 
                 len = await stream.ReadAsync(buf, 0, buf.Length).ConfigureAwait(false);
-                //await stream.ReadAsync(buf, 0, 5).ConfigureAwait(false);
                 if (len == 0) break; // 연결 종료
 
                 imgId = BitConverter.ToInt32(buf.AsSpan()[0..4]);
                 imgSize = BitConverter.ToInt64(buf.AsSpan()[4..12]);
                 imgType = buf[12];
                 imgBinary = buf[13..buf.Length];
-                imgOffset.TryAdd(imgId, offset); // TryAdd 키가 없으면 추가하고 true 반환, 있으면 추가하지 않고 false 반환
+                ImgOffset.TryAdd(imgId, offset); // TryAdd 키가 없으면 추가하고 true 반환, 있으면 추가하지 않고 false 반환
 
                 int writeSize;
                 if (imgSize < imgBinary.Length)
                     writeSize = (int)imgSize;
                 else writeSize = imgBinary.Length;
 
-                Write_img(imgBinary, imgId, imgType, imgOffset[imgId], writeSize);
-                imgOffset[imgId] += imgBinary.Length; // 실제로 읽은만큼 offset
-                Console.WriteLine(++num);
-                Console.WriteLine(writeSize);
+                string imgPath = Write_img(imgBinary, imgId, imgType, ImgOffset[imgId], writeSize);
+                ImgOffset[imgId] += imgBinary.Length; // 실제로 읽은만큼 offset
+                if(imgSize == ImgOffset[imgId])
+                {
+                    Handler(imgType,imgPath,stream);
+                }
             }
         }
 
-        private void Write_img(byte[] imgBinary, int imgId, byte imgType, int offset, int writeSize)
+        private string Write_img(byte[] imgBinary, int imgId, byte imgType, int offset, int writeSize)
         {
             string folderName = "";
             switch (imgType)
             {
-                case 0: folderName = "Entrance"; break;
-                case 1: folderName = "Exit"; break;
-                case 2: folderName = "Parking Lot"; break;
+                case 5: folderName = "Entrance"; break;
+                case 6: folderName = "Exit"; break;
             }
             string path = @$"/img/{folderName}";
 
@@ -95,6 +112,85 @@ namespace Server.Controller
                 // 파일 쓰기
                 stream.Write(imgBinary, 0, writeSize);
             }
+            return saveDir;
+        }
+
+        private void Handler(byte imgType, string imgPath, NetworkStream stream)
+        {
+            string vehicleNum = Num_detection.Execute(imgPath);
+            Receive_msg rcv_msg = new();
+            Send_msg send_msg;
+            rcv_msg.Record.VehicleNum = vehicleNum;
+            // 입차
+            if (imgType == (byte)MsgId.ENTER_VEHICLE)
+            {
+                send_msg = Show_entryRecord(rcv_msg); // 입차 시 처리 메서드
+                Send_messageAsync(send_msg, Clients[1]);
+            }
+            // 출차
+            else
+            {
+                send_msg = Show_paymentInfo(rcv_msg);
+                Send_messageAsync(send_msg, Clients[4]); // 출차 차량 정보를 화면에 띄운다 -> 사전정산/정기등록 차량이면 결제화면 패스
+            }
+        }
+
+
+        private Send_msg Show_entryRecord(Receive_msg rcv_msg)
+        {
+            byte cls = Dbc.Select_expDate(rcv_msg.Record.VehicleNum);
+            Dbc.Insert_Entry_record(cls, rcv_msg.Record.VehicleNum);
+            Entry_exit_record record = Dbc.Select_record(rcv_msg.Record.VehicleNum);
+            string entry_date = Date_to_str(record.EntryDate);
+            Send_msg send_msg = new()
+            {
+                MsgId = (byte)MsgId.ENTRY_RECORD,
+                Record = new()
+                {
+                    VehicleNum = record.VehicleNum,
+                    EntryDate = entry_date,
+                    Classification = record.Classification
+                }
+            };
+
+            return send_msg;
+        }
+
+        private Send_msg Show_paymentInfo(Receive_msg rcv_msg)
+        {
+            Entry_exit_record record = Dbc.Select_record(rcv_msg.Record.VehicleNum);
+
+            string entry_date = Date_to_str(record.EntryDate);
+            DateTime now = DateTime.Now;
+            string exit_Date = Date_to_str(now);
+            int parkingTime = Dif_date(record.EntryDate, now);
+            string parking_time = parkingTime + "분";
+            int totalFee = Cal_totalFee(parkingTime);
+            string total_fee = totalFee.ToString() + "원";
+            // 같은 시점에서 업데이트하면 안되고, 결제하는 시점으로 바뀌어야함
+            Dbc.Update_exitRecord(rcv_msg.Record.VehicleNum, now, totalFee);
+            Send_msg send_msg = new()
+            {
+                MsgId = (byte)MsgId.PAYMENT,
+                Record = new()
+                {
+                    VehicleNum = record.VehicleNum,
+                    EntryDate = entry_date,
+                    Classification = record.Classification,
+                    ExitDate = exit_Date,
+                    ParkingTime = parking_time,
+                    TotalFee = total_fee
+                }
+            };
+
+            return send_msg;
+        }
+
+        private async Task Send_messageAsync(Send_msg msg, NetworkStream stream)
+        {
+            string json = JsonConvert.SerializeObject(msg);
+            byte[] buf = Encoding.UTF8.GetBytes(json);
+            await stream.WriteAsync(buf).ConfigureAwait(false);
         }
     }
 }

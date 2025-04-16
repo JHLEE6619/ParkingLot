@@ -12,7 +12,6 @@ using System.Windows.Shapes;
 using Client1.ViewModel;
 using OpenCvSharp;
 using OpenCvSharp.WpfExtensions;
-
 namespace Client1;
 
 /// <summary>
@@ -24,12 +23,15 @@ public partial class MainWindow : System.Windows.Window
     private VideoCapture video_entrance;
     private VideoCapture video_exit;
     public Network network;
+    public VM_Main VM_main;
     uint imgId = 0;
     object lockobj = new();
 
     public MainWindow()
     {
-        //network = new(this);
+        VM_main = new();
+        network = new(this, VM_main);
+        DataContext = VM_main;
         InitializeComponent();
         InitializeVideo();
     }
@@ -42,9 +44,9 @@ public partial class MainWindow : System.Windows.Window
         video_parkingLot = new VideoCapture(filePath_parkingLot);
         video_entrance = new VideoCapture(filePath_entrance);
         video_exit = new VideoCapture(filePath_exit);
-        Task.Run(() => PlayVideo(video_parkingLot, Img_ParkingLot, (byte)Network.MsgId.ENTER_VEHICLE));
         Task.Run(() => PlayVideo(video_entrance, Img_Entrance, (byte)Network.MsgId.ENTER_VEHICLE));
         Task.Run(() => PlayVideo(video_exit, Img_Exit, (byte)Network.MsgId.EXIT_VEHICLE));
+        Task.Run(() => PlayVideo(video_parkingLot, Img_ParkingLot, (byte)Network.MsgId.SEAT_INFO));
     }
 
     private void PlayVideo(VideoCapture video, Image img, byte msgId)
@@ -59,7 +61,7 @@ public partial class MainWindow : System.Windows.Window
             if (matImage.Empty())
                 break;
 
-            // 화면에 출력 (ToBitmapSource → Dispatcher)
+            // 화면에 출력
             var converted = matImage.ToBitmapSource();
             converted.Freeze();
             Dispatcher.Invoke(() =>

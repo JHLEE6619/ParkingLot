@@ -1,26 +1,46 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Client4\\",
+  "WorkspaceRootPath": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client4\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5DE27543-CCBF-4908-AA3B-3C6982CCCE7D}|Client4.csproj|c:\\users\\lms\\desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\client4\\view\\goodbye.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{5DE27543-CCBF-4908-AA3B-3C6982CCCE7D}|Client4.csproj|solutionrelative:view\\goodbye.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{5DE27543-CCBF-4908-AA3B-3C6982CCCE7D}|Client4.csproj|c:\\users\\lms\\desktop\\parkinglot\\client4\\view\\main.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DE27543-CCBF-4908-AA3B-3C6982CCCE7D}|Client4.csproj|solutionrelative:view\\main.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5DE27543-CCBF-4908-AA3B-3C6982CCCE7D}|Client4.csproj|c:\\users\\lms\\desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\client4\\view\\payment.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{5DE27543-CCBF-4908-AA3B-3C6982CCCE7D}|Client4.csproj|solutionrelative:view\\payment.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{5DE27543-CCBF-4908-AA3B-3C6982CCCE7D}|Client4.csproj|c:\\users\\lms\\desktop\\parkinglot\\client4\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DE27543-CCBF-4908-AA3B-3C6982CCCE7D}|Client4.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5DE27543-CCBF-4908-AA3B-3C6982CCCE7D}|Client4.csproj|c:\\users\\lms\\desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\client4\\view\\main.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{5DE27543-CCBF-4908-AA3B-3C6982CCCE7D}|Client4.csproj|c:\\users\\lms\\desktop\\parkinglot\\client4\\viewmodel\\network.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DE27543-CCBF-4908-AA3B-3C6982CCCE7D}|Client4.csproj|solutionrelative:viewmodel\\network.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DE27543-CCBF-4908-AA3B-3C6982CCCE7D}|Client4.csproj|c:\\users\\lms\\desktop\\parkinglot\\client4\\viewmodel\\vm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DE27543-CCBF-4908-AA3B-3C6982CCCE7D}|Client4.csproj|solutionrelative:viewmodel\\vm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DE27543-CCBF-4908-AA3B-3C6982CCCE7D}|Client4.csproj|c:\\users\\lms\\desktop\\parkinglot\\client4\\view\\goodbye.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DE27543-CCBF-4908-AA3B-3C6982CCCE7D}|Client4.csproj|solutionrelative:view\\goodbye.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DE27543-CCBF-4908-AA3B-3C6982CCCE7D}|Client4.csproj|c:\\users\\lms\\desktop\\parkinglot\\client4\\view\\payment.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DE27543-CCBF-4908-AA3B-3C6982CCCE7D}|Client4.csproj|solutionrelative:view\\payment.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DE27543-CCBF-4908-AA3B-3C6982CCCE7D}|Client4.csproj|c:\\users\\lms\\desktop\\parkinglot\\client4\\view\\main.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{5DE27543-CCBF-4908-AA3B-3C6982CCCE7D}|Client4.csproj|solutionrelative:view\\main.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5DE27543-CCBF-4908-AA3B-3C6982CCCE7D}|Client4.csproj|c:\\users\\lms\\desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\client4\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{5DE27543-CCBF-4908-AA3B-3C6982CCCE7D}|Client4.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{5DE27543-CCBF-4908-AA3B-3C6982CCCE7D}|Client4.csproj|c:\\users\\lms\\desktop\\parkinglot\\client4\\model\\record.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5DE27543-CCBF-4908-AA3B-3C6982CCCE7D}|Client4.csproj|solutionrelative:model\\record.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5DE27543-CCBF-4908-AA3B-3C6982CCCE7D}|Client4.csproj|c:\\users\\lms\\desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\client4\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5DE27543-CCBF-4908-AA3B-3C6982CCCE7D}|Client4.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5DE27543-CCBF-4908-AA3B-3C6982CCCE7D}|Client4.csproj|c:\\users\\lms\\desktop\\parkinglot\\client4\\view\\goodbye.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5DE27543-CCBF-4908-AA3B-3C6982CCCE7D}|Client4.csproj|solutionrelative:view\\goodbye.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5DE27543-CCBF-4908-AA3B-3C6982CCCE7D}|Client4.csproj|c:\\users\\lms\\desktop\\parkinglot\\client4\\view\\payment.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5DE27543-CCBF-4908-AA3B-3C6982CCCE7D}|Client4.csproj|solutionrelative:view\\payment.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,15 +50,93 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GoodBye.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client4\\View\\GoodBye.xaml.cs",
+              "RelativeDocumentMoniker": "View\\GoodBye.xaml.cs",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client4\\View\\GoodBye.xaml.cs",
+              "RelativeToolTip": "View\\GoodBye.xaml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABsAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T01:51:34.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Payment.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client4\\View\\Payment.xaml.cs",
+              "RelativeDocumentMoniker": "View\\Payment.xaml.cs",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client4\\View\\Payment.xaml.cs",
+              "RelativeToolTip": "View\\Payment.xaml.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABsAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T01:49:41.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "VM_Main.cs",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client4\\ViewModel\\VM_Main.cs",
+              "RelativeDocumentMoniker": "ViewModel\\VM_Main.cs",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client4\\ViewModel\\VM_Main.cs",
+              "RelativeToolTip": "ViewModel\\VM_Main.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T01:36:56.2Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Main.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client4\\View\\Main.xaml.cs",
+              "RelativeDocumentMoniker": "View\\Main.xaml.cs",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client4\\View\\Main.xaml.cs",
+              "RelativeToolTip": "View\\Main.xaml.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAASwBkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T01:29:54.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Record.cs",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client4\\Model\\Record.cs",
+              "RelativeDocumentMoniker": "Model\\Record.cs",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client4\\Model\\Record.cs",
+              "RelativeToolTip": "Model\\Record.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T01:13:04.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Network.cs",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client4\\ViewModel\\Network.cs",
+              "RelativeDocumentMoniker": "ViewModel\\Network.cs",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client4\\ViewModel\\Network.cs",
+              "RelativeToolTip": "ViewModel\\Network.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAiwCMAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T09:33:22.058Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "GoodBye.xaml",
-              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Client4\\View\\GoodBye.xaml",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client4\\View\\GoodBye.xaml",
               "RelativeDocumentMoniker": "View\\GoodBye.xaml",
-              "ToolTip": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Client4\\View\\GoodBye.xaml",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client4\\View\\GoodBye.xaml",
               "RelativeToolTip": "View\\GoodBye.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-04-02T03:44:12.505Z",
@@ -46,11 +144,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "Payment.xaml",
-              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Client4\\View\\Payment.xaml",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client4\\View\\Payment.xaml",
               "RelativeDocumentMoniker": "View\\Payment.xaml",
-              "ToolTip": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Client4\\View\\Payment.xaml",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client4\\View\\Payment.xaml",
               "RelativeToolTip": "View\\Payment.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-04-02T03:28:35.588Z",
@@ -58,11 +156,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Main.xaml",
-              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Client4\\View\\Main.xaml",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client4\\View\\Main.xaml",
               "RelativeDocumentMoniker": "View\\Main.xaml",
-              "ToolTip": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Client4\\View\\Main.xaml",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client4\\View\\Main.xaml",
               "RelativeToolTip": "View\\Main.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-04-02T02:36:45.643Z",
@@ -70,25 +168,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Client4\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Client4\\MainWindow.xaml",
-              "RelativeToolTip": "MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-02T02:03:46.468Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Client4\\MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client4\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\Client4\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client4\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-02T02:03:44.338Z",
               "EditorCaption": ""

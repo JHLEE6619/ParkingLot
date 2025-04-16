@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ICommandTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5412a8644f8f10edf31de8fbdd34a95b146e0f6b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1ebcb1e0c4b4bbe009188ac329169ffc48bedcae")]
 [assembly: System.Reflection.AssemblyProductAttribute("ICommandTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ICommandTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

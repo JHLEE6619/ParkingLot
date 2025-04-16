@@ -11,7 +11,7 @@ using Newtonsoft.Json;
 
 namespace Server.Controller
 {
-    public class MainServer
+    public class MainServer : Date
     {
 
         public DBC Dbc {get;set;}
@@ -113,7 +113,7 @@ namespace Server.Controller
             string entry_date = Date_to_str(record.EntryDate);
             DateTime now = DateTime.Now;
             string exit_Date = Date_to_str(now);
-            int parkingTime = dif_date(record.EntryDate, now);
+            int parkingTime = Dif_date(record.EntryDate, now);
             string parking_time = parkingTime + "분";
             int totalFee = Cal_totalFee(parkingTime);
             string total_fee = totalFee.ToString() + "원";
@@ -158,25 +158,6 @@ namespace Server.Controller
             };
 
             return send_msg;
-        }
-
-        private int dif_date(DateTime entryDate, DateTime exitDate)
-        {
-            TimeSpan timeDiff = entryDate - exitDate;
-            int min = (int)timeDiff.TotalMinutes;
-            return min;
-        }
-
-        private int Cal_totalFee(int parkingTime)
-        {
-            int totalFee = (Fee.fee * parkingTime / 10);
-            return totalFee;
-        }
-
-        public string Date_to_str(DateTime dateTime)
-        {
-            string dateForamt = "MM월 dd일 HH시 mm분";
-            return dateTime.ToString(dateForamt);
         }
     }
 }

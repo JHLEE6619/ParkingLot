@@ -3,6 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\LMS\\Desktop\\ParkingLot\\test\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{97B4F315-8AD3-4322-8465-A840A2CB5CBD}|..\\WpfTest\\WpfTest.csproj|c:\\users\\lms\\desktop\\parkinglot\\wpftest\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97B4F315-8AD3-4322-8465-A840A2CB5CBD}|..\\WpfTest\\WpfTest.csproj|c:\\users\\lms\\desktop\\parkinglot\\wpftest\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{904D2326-B494-4D88-9A8B-1B34EA7CAC42}|test.csproj|c:\\users\\lms\\desktop\\parkinglot\\test\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{904D2326-B494-4D88-9A8B-1B34EA7CAC42}|test.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -23,6 +29,31 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\ParkingLot\\WpfTest\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "..\\WpfTest\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\ParkingLot\\WpfTest\\MainWindow.xaml*",
+              "RelativeToolTip": "..\\WpfTest\\MainWindow.xaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-16T08:13:10.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\ParkingLot\\WpfTest\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "..\\WpfTest\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\ParkingLot\\WpfTest\\MainWindow.xaml.cs*",
+              "RelativeToolTip": "..\\WpfTest\\MainWindow.xaml.cs*",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T08:13:10.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "File.cs",
               "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\ParkingLot\\test\\File.cs",
               "RelativeDocumentMoniker": "File.cs",
@@ -35,13 +66,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\ParkingLot\\test\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\LMS\\Desktop\\ParkingLot\\test\\Program.cs*",
-              "RelativeToolTip": "Program.cs*",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB8AAAAlAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\ParkingLot\\test\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAiwBYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-02T05:39:47.95Z",
               "EditorCaption": ""

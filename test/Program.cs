@@ -1,4 +1,6 @@
-﻿using System.Net.Sockets;
+﻿using System.Collections.ObjectModel;
+using System.Drawing;
+using System.Net.Sockets;
 using Newtonsoft.Json;
 
 namespace test
@@ -15,21 +17,23 @@ namespace test
         public int A { get; set; }
         public string B { get; set; }
     }
+
     public class Program
     {
+        public static ObservableCollection<Test> Color { get; set; } = [];
+
         static void Main(string[] args)
         {
+            Color.Add(new() { A = 1 });
+            Color.Add(new() { A = 2 });
+            Color.Add(new() { A = 3 });
 
-
-            Test2 Test = new()
-            {
-                A = 1,
-                B = "Test"
-            };
-
-            string json = JsonConvert.SerializeObject(Test);
-            Test testB = JsonConvert.DeserializeObject<Test>(json);
-            Console.WriteLine(testB.C);
+            Color.RemoveAt(0);
+            Console.WriteLine(Color[0].A);
+            Console.WriteLine(Color[1].A);
+            Color.Insert(0, new() { A = 1 });
+            Console.WriteLine(Color[0].A);
+            Console.WriteLine(Color[1].A);
 
         }
     }

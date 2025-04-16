@@ -1,26 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\MVVM\uC608\uC81C\\",
+  "WorkspaceRootPath": "C:\\Users\\LMS\\Desktop\\ParkingLot\\MVVM\uC608\uC81C\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{527ADF91-F6CB-4823-8E60-AB5086339AE3}|ICommandTest\\ICommandTest.csproj|c:\\users\\lms\\desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\mvvm\uC608\uC81C\\icommandtest\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{527ADF91-F6CB-4823-8E60-AB5086339AE3}|ICommandTest\\ICommandTest.csproj|solutionrelative:icommandtest\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{527ADF91-F6CB-4823-8E60-AB5086339AE3}|ICommandTest\\ICommandTest.csproj|c:\\users\\lms\\desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\mvvm\uC608\uC81C\\icommandtest\\viewmodel\\commands\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{527ADF91-F6CB-4823-8E60-AB5086339AE3}|ICommandTest\\ICommandTest.csproj|c:\\users\\lms\\desktop\\parkinglot\\mvvm\uC608\uC81C\\icommandtest\\viewmodel\\commands\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{527ADF91-F6CB-4823-8E60-AB5086339AE3}|ICommandTest\\ICommandTest.csproj|solutionrelative:icommandtest\\viewmodel\\commands\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{527ADF91-F6CB-4823-8E60-AB5086339AE3}|ICommandTest\\ICommandTest.csproj|c:\\users\\lms\\desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\mvvm\uC608\uC81C\\icommandtest\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{527ADF91-F6CB-4823-8E60-AB5086339AE3}|ICommandTest\\ICommandTest.csproj|solutionrelative:icommandtest\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{527ADF91-F6CB-4823-8E60-AB5086339AE3}|ICommandTest\\ICommandTest.csproj|c:\\users\\lms\\desktop\\parkinglot\\mvvm\uC608\uC81C\\icommandtest\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{527ADF91-F6CB-4823-8E60-AB5086339AE3}|ICommandTest\\ICommandTest.csproj|solutionrelative:icommandtest\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{527ADF91-F6CB-4823-8E60-AB5086339AE3}|ICommandTest\\ICommandTest.csproj|c:\\users\\lms\\desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\mvvm\uC608\uC81C\\icommandtest\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{527ADF91-F6CB-4823-8E60-AB5086339AE3}|ICommandTest\\ICommandTest.csproj|c:\\users\\lms\\desktop\\parkinglot\\mvvm\uC608\uC81C\\icommandtest\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{527ADF91-F6CB-4823-8E60-AB5086339AE3}|ICommandTest\\ICommandTest.csproj|solutionrelative:icommandtest\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{527ADF91-F6CB-4823-8E60-AB5086339AE3}|ICommandTest\\ICommandTest.csproj|c:\\users\\lms\\desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\mvvm\uC608\uC81C\\icommandtest\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{527ADF91-F6CB-4823-8E60-AB5086339AE3}|ICommandTest\\ICommandTest.csproj|c:\\users\\lms\\desktop\\parkinglot\\mvvm\uC608\uC81C\\icommandtest\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{527ADF91-F6CB-4823-8E60-AB5086339AE3}|ICommandTest\\ICommandTest.csproj|solutionrelative:icommandtest\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{527ADF91-F6CB-4823-8E60-AB5086339AE3}|ICommandTest\\ICommandTest.csproj|c:\\users\\lms\\desktop\\parkinglot\\mvvm\uC608\uC81C\\icommandtest\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{527ADF91-F6CB-4823-8E60-AB5086339AE3}|ICommandTest\\ICommandTest.csproj|solutionrelative:icommandtest\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\LMS\\Desktop\\\uD504\uB85C\uC81D\uD2B8\\WPF_\uCDE8\uC5C5in\\WpfApp1\\DBC.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,15 +33,27 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DBC.cs",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\\uD504\uB85C\uC81D\uD2B8\\WPF_\uCDE8\uC5C5in\\WpfApp1\\DBC.cs",
+              "RelativeDocumentMoniker": "..\\..\\\uD504\uB85C\uC81D\uD2B8\\WPF_\uCDE8\uC5C5in\\WpfApp1\\DBC.cs",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\\uD504\uB85C\uC81D\uD2B8\\WPF_\uCDE8\uC5C5in\\WpfApp1\\DBC.cs",
+              "RelativeToolTip": "..\\..\\\uD504\uB85C\uC81D\uD2B8\\WPF_\uCDE8\uC5C5in\\WpfApp1\\DBC.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAFcAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T03:15:33.192Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\MVVM\uC608\uC81C\\ICommandTest\\Model\\User.cs",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\ParkingLot\\MVVM\uC608\uC81C\\ICommandTest\\Model\\User.cs",
               "RelativeDocumentMoniker": "ICommandTest\\Model\\User.cs",
-              "ToolTip": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\MVVM\uC608\uC81C\\ICommandTest\\Model\\User.cs",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\ParkingLot\\MVVM\uC608\uC81C\\ICommandTest\\Model\\User.cs",
               "RelativeToolTip": "ICommandTest\\Model\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -46,50 +61,48 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Command.cs",
-              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\MVVM\uC608\uC81C\\ICommandTest\\ViewModel\\Commands\\Command.cs",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\ParkingLot\\MVVM\uC608\uC81C\\ICommandTest\\ViewModel\\Commands\\Command.cs",
               "RelativeDocumentMoniker": "ICommandTest\\ViewModel\\Commands\\Command.cs",
-              "ToolTip": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\MVVM\uC608\uC81C\\ICommandTest\\ViewModel\\Commands\\Command.cs",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\ParkingLot\\MVVM\uC608\uC81C\\ICommandTest\\ViewModel\\Commands\\Command.cs",
               "RelativeToolTip": "ICommandTest\\ViewModel\\Commands\\Command.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-28T02:29:07.917Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\MVVM\uC608\uC81C\\ICommandTest\\MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\ParkingLot\\MVVM\uC608\uC81C\\ICommandTest\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "ICommandTest\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\MVVM\uC608\uC81C\\ICommandTest\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\ParkingLot\\MVVM\uC608\uC81C\\ICommandTest\\MainWindow.xaml.cs",
               "RelativeToolTip": "ICommandTest\\MainWindow.xaml.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T02:22:19.547Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T02:22:19.547Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "MainViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\MVVM\uC608\uC81C\\ICommandTest\\ViewModel\\MainViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\ParkingLot\\MVVM\uC608\uC81C\\ICommandTest\\ViewModel\\MainViewModel.cs",
               "RelativeDocumentMoniker": "ICommandTest\\ViewModel\\MainViewModel.cs",
-              "ToolTip": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\MVVM\uC608\uC81C\\ICommandTest\\ViewModel\\MainViewModel.cs",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\ParkingLot\\MVVM\uC608\uC81C\\ICommandTest\\ViewModel\\MainViewModel.cs",
               "RelativeToolTip": "ICommandTest\\ViewModel\\MainViewModel.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T02:21:27.357Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T02:21:27.357Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\MVVM\uC608\uC81C\\ICommandTest\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\ParkingLot\\MVVM\uC608\uC81C\\ICommandTest\\MainWindow.xaml",
               "RelativeDocumentMoniker": "ICommandTest\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\LMS\\Desktop\\\uC8FC\uCC28\uAD00\uB9AC \uC2DC\uC2A4\uD15C\\MVVM\uC608\uC81C\\ICommandTest\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\ParkingLot\\MVVM\uC608\uC81C\\ICommandTest\\MainWindow.xaml",
               "RelativeToolTip": "ICommandTest\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-03-28T02:21:21.209Z",

@@ -23,6 +23,9 @@ namespace Client4.View
         public GoodBye()
         {
             InitializeComponent();
+            Thread.Sleep(3000);
+            Main main = new();
+            this.NavigationService.Navigate(main);
         }
     }
 }
