@@ -18,9 +18,15 @@ namespace Server.Controller
         public DBC Dbc { get; set; }
         public Dictionary<byte, NetworkStream> Clients { get; set; } = [];
 
+        public FileReceiveServer()
+        {
+            Clients.Add(1, null);
+            Clients.Add(4, null);
+        }
+
         enum MsgId
         {
-            ENTRY_RECORD = 0, PAYMENT = 1, ENTER_VEHICLE = 5, EXIT_VEHICLE = 6,
+            ENTRY_RECORD = 0, PAYMENT = 1, INIT_PARKING_LIST = 4, ENTER_VEHICLE = 5, EXIT_VEHICLE = 6,
         }
         enum Vehicle_class
         {
@@ -49,30 +55,41 @@ namespace Server.Controller
             // 1바이트 수신 : 1 -> Client1, 4 -> Client4
             TcpClient tc = (TcpClient)client;
             NetworkStream stream = tc.GetStream(); // Client1, Client4가 연결됨
-            byte[] buf = new byte[1024];
+            byte[] clnt_num = new byte[1];
             Console.WriteLine(" 클라이언트 연결됨 ");
-            await stream.ReadAsync(buf, 0, 1).ConfigureAwait(false);
-            Clients.Add(buf[0], stream);
+            await stream.ReadAsync(clnt_num).ConfigureAwait(false);
+            Clients[clnt_num[0]] = stream;
+            // Client1이 연결되면 주차리스트 보내기
+            if (clnt_num[0] == 1)
+            {
+                await Send_messageAsync(Send_all_record(), Clients[clnt_num[0]]);
+                Console.WriteLine("주차 기록 전송 완료");
+            }
 
 
-                // 헤더 : 이미지식별자(int), 이미지 크기(int), 이미지 유형(byte) 
-                // 바디 : 이미지 binary 데이터
-                int imgId;
+            // 헤더 : 이미지식별자(int), 이미지 크기(int), 이미지 유형(byte) 
+            // 바디 : 이미지 binary 데이터
+            byte[] buf = new byte[1024];
+            int imgId;
             long imgSize;
             byte imgType;
+            int headerSize = sizeof(int) + sizeof(long) + sizeof(byte);
             byte[] imgBinary;
             int offset = 0;
             while (true)
             {
                 int received = 0, len;
-
                 len = await stream.ReadAsync(buf, 0, buf.Length).ConfigureAwait(false);
-                if (len == 0) break; // 연결 종료
+                if (len <= 0)
+                {
+                    Console.WriteLine("클라이언트 연결 종료");
+                    break; // 연결 종료
+                }
 
                 imgId = BitConverter.ToInt32(buf.AsSpan()[0..4]);
                 imgSize = BitConverter.ToInt64(buf.AsSpan()[4..12]);
                 imgType = buf[12];
-                imgBinary = buf[13..buf.Length];
+                imgBinary = buf[13..len];
                 ImgOffset.TryAdd(imgId, offset); // TryAdd 키가 없으면 추가하고 true 반환, 있으면 추가하지 않고 false 반환
 
                 int writeSize;
@@ -84,6 +101,7 @@ namespace Server.Controller
                 ImgOffset[imgId] += imgBinary.Length; // 실제로 읽은만큼 offset
                 if(imgSize == ImgOffset[imgId])
                 {
+                    Console.WriteLine("이미지 저장 완료");
                     Handler(imgType,imgPath,stream);
                 }
             }
@@ -105,7 +123,7 @@ namespace Server.Controller
                 Console.WriteLine("폴더 생성");
             }
 
-            string saveDir = @$"/img/{folderName}/{imgId}.jpg";
+            string saveDir = path + @$"/{imgId}.jpg";
             using (var stream = new FileStream(saveDir, FileMode.OpenOrCreate, FileAccess.Write))
             {
                 stream.Seek(offset, SeekOrigin.Begin);
@@ -126,6 +144,7 @@ namespace Server.Controller
             {
                 send_msg = Show_entryRecord(rcv_msg); // 입차 시 처리 메서드
                 Send_messageAsync(send_msg, Clients[1]);
+                Console.WriteLine("주차 기록 전송 완료");
             }
             // 출차
             else
@@ -140,6 +159,7 @@ namespace Server.Controller
         {
             byte cls = Dbc.Select_expDate(rcv_msg.Record.VehicleNum);
             Dbc.Insert_Entry_record(cls, rcv_msg.Record.VehicleNum);
+            Console.WriteLine("주차기록 삽입 완료");
             Entry_exit_record record = Dbc.Select_record(rcv_msg.Record.VehicleNum);
             string entry_date = Date_to_str(record.EntryDate);
             Send_msg send_msg = new()
@@ -181,6 +201,30 @@ namespace Server.Controller
                     ParkingTime = parking_time,
                     TotalFee = total_fee
                 }
+            };
+
+            return send_msg;
+        }
+
+        private Send_msg Send_all_record()
+        {
+            List<Entry_exit_record> recordList = Dbc.Select_all_record();
+            List<Record> parkingList = [];
+            foreach (var record in recordList)
+            {
+                Record park = new()
+                {
+                    VehicleNum = record.VehicleNum,
+                    EntryDate = Date_to_str(record.EntryDate),
+                    Classification = record.Classification
+                };
+                parkingList.Add(park);
+            }
+
+            Send_msg send_msg = new()
+            {
+                MsgId = (byte)MsgId.INIT_PARKING_LIST,
+                ParkingList = parkingList
             };
 
             return send_msg;

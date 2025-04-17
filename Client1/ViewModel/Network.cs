@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Drawing;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Interop;
+using System.Windows.Media;
 using Client1.Model;
 using Newtonsoft.Json;
 
@@ -25,14 +25,17 @@ namespace Client1.ViewModel
             ENTRY_RECORD, PAYMENT, REGISTRATION, PERIOD_EXTENSION, INIT_PARKING_LIST, ENTER_VEHICLE, EXIT_VEHICLE, SEAT_INFO
         }
 
-        public Network(MainWindow mainWindow, VM_Main vm_main)
+        public Network(MainWindow mainWindow, VM_Main vm_main, int port)
         {
             this.MainWindow = mainWindow;
             this.VM_Main = vm_main;
-            this.Clnt = new TcpClient("127.0.0.1", 10001);
+            this.Clnt = new TcpClient("127.0.0.1", port);
             this.Stream = this.Clnt.GetStream();
-            Init_Parking_list();
-            Task.Run(() => Receive_message());
+            if (port == 10001) { 
+                byte[] buf = [1];
+                Stream.Write(buf);
+            }
+            Task.Run(() => Receive_messageAsync());
         }
 
 
@@ -52,29 +55,15 @@ namespace Client1.ViewModel
             return msg;
         }
 
-        private void Init_Parking_list()
-        {
-            Send_msg send_msg = new()
-            {
-                MsgId = (byte)MsgId.INIT_PARKING_LIST,
-            };
-            byte[] buf = Serialize_to_json(send_msg);
-            Stream.Write(buf);
-            byte[] read_buf = new byte[1024];
-            int len = Stream.Read(read_buf);
-            Receive_msg rcv_msg = Deserialize_to_json(read_buf, len);
-            rcv_msg.ParkingList.ForEach(x => VM_Main.Record.Add(x));
-        }
-
-        private void Receive_message()
+        private async Task Receive_messageAsync()
         {
             Receive_msg msg = new();
-            byte[] buf = new byte[1024];
+            byte[] buf = new byte[4096];
             try
             {
                 while (true)
                 {
-                    int len = Stream.Read(buf, 0, buf.Length);
+                    int len = await Stream.ReadAsync(buf, 0, buf.Length).ConfigureAwait(false);
                     msg = Deserialize_to_json(buf, len);
                     Handler(msg);
                 }
@@ -93,6 +82,9 @@ namespace Client1.ViewModel
                 case (byte)MsgId.ENTRY_RECORD:
                     Add_Record(msg);
                     break;
+                case (byte)MsgId.INIT_PARKING_LIST:
+                    Init_Parking_list(msg);
+                    break;
                 case (byte)MsgId.EXIT_VEHICLE:
                     Delete_Record(msg);
                     break;
@@ -100,6 +92,14 @@ namespace Client1.ViewModel
                     Update_seatInfo(msg);
                     break;
             }
+        }
+
+        private void Init_Parking_list(Receive_msg rcv_msg)
+        {
+            MainWindow.Dispatcher.Invoke(() =>
+            {
+                rcv_msg.ParkingList.ForEach(x => VM_Main.Record.Add(x));
+            });
         }
 
         private void Add_Record(Receive_msg msg)
@@ -145,9 +145,5 @@ namespace Client1.ViewModel
                 idx++;
             }
         }
-
-
-
-
     }
 }

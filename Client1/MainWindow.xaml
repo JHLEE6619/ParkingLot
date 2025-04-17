@@ -21,7 +21,7 @@
                 <Setter Property="HorizontalContentAlignment" Value="Center"/>
             </Style>
             <Style TargetType="ListViewItem">
-                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="FontSize" Value="18"/>
                 <Setter Property="FontWeight" Value="Bold"/>
                 <Setter Property="HorizontalContentAlignment" Value="Center"/>
             </Style>
@@ -42,8 +42,8 @@
             <ListView.View>
                 <GridView>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=VehicleNum}" Header="차량 번호" Width="160"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=EntryDate}" Header="입차 일시" Width="160"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Classification}" Header="차량 구분" Width="160"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=EntryDate}" Header="입차 일시" Width="220"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Classification}" Header="차량 구분" Width="100"/>
                 </GridView>
             </ListView.View>
         </ListView>

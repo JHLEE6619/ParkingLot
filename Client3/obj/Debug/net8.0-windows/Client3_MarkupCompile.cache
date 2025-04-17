@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-C:\Users\LMS\Desktop\주차관리 시스템\Client3\obj\Debug\net8.0-windows\
+C:\Users\LMS\Desktop\ParkingLot\Client3\obj\Debug\net8.0-windows\
 Client3
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\LMS\Desktop\주차관리 시스템\Client3\App.xaml
+C:\Users\LMS\Desktop\ParkingLot\Client3\App.xaml
 6-1758942971
 
-191427029416
+17263534093
 2022026322373
 MainWindow.xaml;View\Main.xaml;View\Payment.xaml;View\Period_Extension.xaml;View\PrePayment.xaml;View\Registration.xaml;
 

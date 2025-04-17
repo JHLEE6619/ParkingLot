@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Net;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,37 +20,39 @@ namespace Client1;
 /// </summary>
 public partial class MainWindow : System.Windows.Window
 {
-    private VideoCapture video_parkingLot;
     private VideoCapture video_entrance;
     private VideoCapture video_exit;
-    public Network network;
+    private VideoCapture video_parkingLot;
+    public Network clnt_csharp;
+    public Network clnt_python;
     public VM_Main VM_main;
     uint imgId = 0;
     object lockobj = new();
 
     public MainWindow()
     {
-        VM_main = new();
-        network = new(this, VM_main);
-        DataContext = VM_main;
         InitializeComponent();
+        VM_main = new();
+        clnt_csharp = new(this, VM_main, 10001);
+        clnt_python = new(this, VM_main, 10002);
         InitializeVideo();
+        DataContext = VM_main;
     }
 
     private void InitializeVideo()
     {
-        string filePath_parkingLot = @"video/parking_lot.mp4";
-        string filePath_entrance = @"video/Entrance.mp4";
-        string filePath_exit = @"video/Exit.mp4";
-        video_parkingLot = new VideoCapture(filePath_parkingLot);
+        string filePath_entrance = @"C:/Users/LMS/Desktop/video/Entrance.mp4";
+        string filePath_exit = @"C:/Users/LMS/Desktop/video/Exit.mp4";
+        string filePath_parkingLot = @"C:/Users/LMS/Desktop/video/parking_lot.mp4";
         video_entrance = new VideoCapture(filePath_entrance);
         video_exit = new VideoCapture(filePath_exit);
-        Task.Run(() => PlayVideo(video_entrance, Img_Entrance, (byte)Network.MsgId.ENTER_VEHICLE));
-        Task.Run(() => PlayVideo(video_exit, Img_Exit, (byte)Network.MsgId.EXIT_VEHICLE));
-        Task.Run(() => PlayVideo(video_parkingLot, Img_ParkingLot, (byte)Network.MsgId.SEAT_INFO));
+        video_parkingLot = new VideoCapture(filePath_parkingLot);
+        Task.Run(() => PlayVideoAsync(video_entrance, Img_Entrance, (byte)Network.MsgId.ENTER_VEHICLE, clnt_csharp));
+        //Task.Run(() => PlayVideoAsync(video_exit, Img_Exit, (byte)Network.MsgId.EXIT_VEHICLE, clnt_csharp));
+        //Task.Run(() => PlayVideoAsync(video_parkingLot, Img_ParkingLot, (byte)Network.MsgId.SEAT_INFO, clnt_python));
     }
 
-    private void PlayVideo(VideoCapture video, Image img, byte msgId)
+    private async Task PlayVideoAsync(VideoCapture video, Image img, byte msgId, Network network)
     {
         Mat matImage = new();
         var captureTimer = new System.Diagnostics.Stopwatch(); // 저장 타이머
@@ -75,17 +78,18 @@ public partial class MainWindow : System.Windows.Window
                 // 이미지 바이너리 데이터 생성
                 Cv2.ImEncode(".jpg", matImage, out byte[] imgData);
                 // 서버 전송 메서드
-                Send_img(imgData, msgId);                 
+                Send_imgAsync(imgData, msgId, network);                 
                 captureTimer.Restart(); // 타이머 리셋
             }
-            Thread.Sleep(1);
+            Thread.Sleep(33);
         }
         video.Release(); // 비디오가 끝나면 닫기
     }
 
-    private void Send_img(byte[] imgData, byte msgId)
+    private async Task Send_imgAsync(byte[] imgData, byte msgId, Network network)
     {
         long imgSize = imgData.Length; // 이미지 사이즈
+        long remaining_imgSize = imgSize;
         byte[] imgType = [msgId]; // 이미지 타입(0 : 입구 , 1 : 출구, 2 : 주차장)
         int headerSize = sizeof(uint) + sizeof(long) + sizeof(byte);
         byte[] serializedData; // 바이트 배열 컨버트용 버퍼
@@ -94,6 +98,7 @@ public partial class MainWindow : System.Windows.Window
         int readSize = buf.Length - headerSize;
         int readOffset = 0; // 이미지 읽기용 오프셋
 
+        int num = 1;
         while (imgSize > 0)
         {
             // 이미지 식별자
@@ -106,24 +111,25 @@ public partial class MainWindow : System.Windows.Window
             Array.Copy(serializedData, 0, buf, offset, serializedData.Length);
             offset += sizeof(long);
 
-            // 이미지 타입(0 : 입구 , 1 : 출구, 2 : 주차장)
+            // 이미지 타입(5 : 입구 , 6 : 출구, 7 : 주차장)
             Array.Copy(imgType, 0, buf, offset, imgType.Length);
-            offset += imgType.Length;
-
+            offset += sizeof(byte);
             // 이미지 데이터
-            if (imgSize < readSize) readSize = (int)imgSize;
+            if (remaining_imgSize < readSize) readSize = (int)remaining_imgSize;
             if (imgData == null) break;
-            Array.Copy(imgData, 0, buf, offset, imgData.Length);
-            network.Stream.Write(buf, 0, offset + imgData.Length); // 정확한 길이만큼 전송
+            Array.Copy(imgData, readOffset, buf, offset, readSize);
+            await network.Stream.WriteAsync(buf).ConfigureAwait(false);
 
-            imgSize -= readSize;
+            remaining_imgSize -= readSize;
             readOffset += readSize;
-            offset = 0;
+            System.Diagnostics.Debug.WriteLine(readOffset);
+            offset = 0; 
         }
 
         lock (lockobj)
         {
             imgId++;
         }
+        System.Diagnostics.Debug.WriteLine("이미지 전송");
     }
 }

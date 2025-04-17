@@ -19,12 +19,12 @@ namespace Server.Controller
             string uid = "root";
             string pwd = "1234";
             string dbname = "PARKING_LOT";
-            MySqlConnection conn;
+            
             string connectString = $"Server={ip};Port={port};Database={dbname};Uid={uid};Pwd={pwd};CharSet=utf8;";
             // 연결 확인
-            conn = new MySqlConnection(connectString);
-            conn.Open();
-            conn.Ping();
+            Conn = new MySqlConnection(connectString);
+            Conn.Open();
+            Conn.Ping();
         }
 
         /* 입차 시 정기 차량 구분 조회
@@ -183,7 +183,8 @@ namespace Server.Controller
                 };
                 parkingList.Add(record);
             }
-
+            Console.WriteLine("주차 기록 조회 완료");
+            dr.Close();
             return parkingList;
         }
     }

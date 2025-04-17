@@ -9,12 +9,12 @@ namespace Server
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             FileReceiveServer fServer = new();
             MainServer mainServer = new();
             fServer.StartFileRcvServer();
-            mainServer.StartMainServer();
+            await mainServer.StartMainServer();
         }
     }
 }

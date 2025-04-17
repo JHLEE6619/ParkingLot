@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|c:\\users\\lms\\desktop\\parkinglot\\client1\\viewmodel\\network.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|solutionrelative:viewmodel\\network.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|c:\\users\\lms\\desktop\\parkinglot\\client1\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,12 +11,16 @@
       "RelativeMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|solutionrelative:viewmodel\\vm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|c:\\users\\lms\\desktop\\parkinglot\\client1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|c:\\users\\lms\\desktop\\parkinglot\\client1\\viewmodel\\network.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|solutionrelative:viewmodel\\network.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|c:\\users\\lms\\desktop\\parkinglot\\client1\\model\\receive_msg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|solutionrelative:model\\receive_msg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|c:\\users\\lms\\desktop\\parkinglot\\client1\\viewmodel\\commands\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|solutionrelative:viewmodel\\commands\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|c:\\users\\lms\\desktop\\parkinglot\\client1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,68 +30,68 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Receive_msg.cs",
-              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client1\\Model\\Receive_msg.cs",
-              "RelativeDocumentMoniker": "Model\\Receive_msg.cs",
-              "ToolTip": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client1\\Model\\Receive_msg.cs",
-              "RelativeToolTip": "Model\\Receive_msg.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAvAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Network.cs",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client1\\ViewModel\\Network.cs",
+              "RelativeDocumentMoniker": "ViewModel\\Network.cs",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client1\\ViewModel\\Network.cs",
+              "RelativeToolTip": "ViewModel\\Network.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAmwCYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T08:36:53.639Z",
+              "WhenOpened": "2025-04-17T01:53:38.754Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "VM_Main.cs",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client1\\ViewModel\\VM_Main.cs",
+              "RelativeDocumentMoniker": "ViewModel\\VM_Main.cs",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client1\\ViewModel\\VM_Main.cs",
+              "RelativeToolTip": "ViewModel\\VM_Main.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA8AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T01:51:08.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client1\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
               "ToolTip": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client1\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-16T06:42:22.063Z",
+              "WhenOpened": "2025-04-17T01:41:21.181Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "VM_Main.cs",
-              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client1\\ViewModel\\VM_Main.cs",
-              "RelativeDocumentMoniker": "ViewModel\\VM_Main.cs",
-              "ToolTip": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client1\\ViewModel\\VM_Main.cs",
-              "RelativeToolTip": "ViewModel\\VM_Main.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Command.cs",
+              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client1\\ViewModel\\Commands\\Command.cs",
+              "RelativeDocumentMoniker": "ViewModel\\Commands\\Command.cs",
+              "ToolTip": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client1\\ViewModel\\Commands\\Command.cs",
+              "RelativeToolTip": "ViewModel\\Commands\\Command.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T06:23:08.597Z",
+              "WhenOpened": "2025-04-17T01:41:09.006Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Network.cs",
-              "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client1\\ViewModel\\Network.cs",
-              "RelativeDocumentMoniker": "ViewModel\\Network.cs",
-              "ToolTip": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client1\\ViewModel\\Network.cs",
-              "RelativeToolTip": "ViewModel\\Network.cs",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAAAI4AAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T07:42:14.792Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client1\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client1\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACEAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAFwAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-10T08:14:56.683Z",
               "EditorCaption": ""

@@ -30,3 +30,34 @@ C:\Users\LMS\Desktop\주차관리 시스템\Client1\bin\Debug\net8.0-windows\run
 C:\Users\LMS\Desktop\주차관리 시스템\Client1\bin\Debug\net8.0-windows\runtimes\win-x64\native\opencv_videoio_ffmpeg4100_64.dll
 C:\Users\LMS\Desktop\주차관리 시스템\Client1\bin\Debug\net8.0-windows\runtimes\win-x86\native\OpenCvSharpExtern.dll
 C:\Users\LMS\Desktop\주차관리 시스템\Client1\bin\Debug\net8.0-windows\runtimes\win-x86\native\opencv_videoio_ffmpeg4100.dll
+C:\Users\LMS\Desktop\ParkingLot\Client1\bin\Debug\net8.0-windows\Client1.exe
+C:\Users\LMS\Desktop\ParkingLot\Client1\bin\Debug\net8.0-windows\Client1.deps.json
+C:\Users\LMS\Desktop\ParkingLot\Client1\bin\Debug\net8.0-windows\Client1.runtimeconfig.json
+C:\Users\LMS\Desktop\ParkingLot\Client1\bin\Debug\net8.0-windows\Client1.dll
+C:\Users\LMS\Desktop\ParkingLot\Client1\bin\Debug\net8.0-windows\Client1.pdb
+C:\Users\LMS\Desktop\ParkingLot\Client1\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\LMS\Desktop\ParkingLot\Client1\bin\Debug\net8.0-windows\OpenCvSharp.dll
+C:\Users\LMS\Desktop\ParkingLot\Client1\bin\Debug\net8.0-windows\OpenCvSharp.Extensions.dll
+C:\Users\LMS\Desktop\ParkingLot\Client1\bin\Debug\net8.0-windows\OpenCvSharp.WpfExtensions.dll
+C:\Users\LMS\Desktop\ParkingLot\Client1\bin\Debug\net8.0-windows\runtimes\win-x64\native\OpenCvSharpExtern.dll
+C:\Users\LMS\Desktop\ParkingLot\Client1\bin\Debug\net8.0-windows\runtimes\win-x64\native\opencv_videoio_ffmpeg4100_64.dll
+C:\Users\LMS\Desktop\ParkingLot\Client1\bin\Debug\net8.0-windows\runtimes\win-x86\native\OpenCvSharpExtern.dll
+C:\Users\LMS\Desktop\ParkingLot\Client1\bin\Debug\net8.0-windows\runtimes\win-x86\native\opencv_videoio_ffmpeg4100.dll
+C:\Users\LMS\Desktop\ParkingLot\Client1\obj\Debug\net8.0-windows\Client1.csproj.AssemblyReference.cache
+C:\Users\LMS\Desktop\ParkingLot\Client1\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\LMS\Desktop\ParkingLot\Client1\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\LMS\Desktop\ParkingLot\Client1\obj\Debug\net8.0-windows\Client1_MarkupCompile.cache
+C:\Users\LMS\Desktop\ParkingLot\Client1\obj\Debug\net8.0-windows\Client1_MarkupCompile.lref
+C:\Users\LMS\Desktop\ParkingLot\Client1\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\LMS\Desktop\ParkingLot\Client1\obj\Debug\net8.0-windows\Client1.g.resources
+C:\Users\LMS\Desktop\ParkingLot\Client1\obj\Debug\net8.0-windows\Client1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LMS\Desktop\ParkingLot\Client1\obj\Debug\net8.0-windows\Client1.AssemblyInfoInputs.cache
+C:\Users\LMS\Desktop\ParkingLot\Client1\obj\Debug\net8.0-windows\Client1.AssemblyInfo.cs
+C:\Users\LMS\Desktop\ParkingLot\Client1\obj\Debug\net8.0-windows\Client1.csproj.CoreCompileInputs.cache
+C:\Users\LMS\Desktop\ParkingLot\Client1\obj\Debug\net8.0-windows\Client1.sourcelink.json
+C:\Users\LMS\Desktop\ParkingLot\Client1\obj\Debug\net8.0-windows\Client1.csproj.Up2Date
+C:\Users\LMS\Desktop\ParkingLot\Client1\obj\Debug\net8.0-windows\Client1.dll
+C:\Users\LMS\Desktop\ParkingLot\Client1\obj\Debug\net8.0-windows\refint\Client1.dll
+C:\Users\LMS\Desktop\ParkingLot\Client1\obj\Debug\net8.0-windows\Client1.pdb
+C:\Users\LMS\Desktop\ParkingLot\Client1\obj\Debug\net8.0-windows\Client1.genruntimeconfig.cache
+C:\Users\LMS\Desktop\ParkingLot\Client1\obj\Debug\net8.0-windows\ref\Client1.dll

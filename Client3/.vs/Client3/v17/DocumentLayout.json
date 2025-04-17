@@ -66,8 +66,7 @@
               "RelativeToolTip": "Model\\Receive_msg.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-08T00:42:51.783Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-08T00:42:51.783Z"
             },
             {
               "$type": "Document",
@@ -148,7 +147,7 @@
               "RelativeDocumentMoniker": "ViewModel\\VM_Registration.cs",
               "ToolTip": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client3\\ViewModel\\VM_Registration.cs",
               "RelativeToolTip": "ViewModel\\VM_Registration.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-07T09:59:01.646Z",
               "EditorCaption": ""
@@ -163,8 +162,7 @@
               "RelativeToolTip": "ViewModel\\Network.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAADMAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T08:28:22.381Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T08:28:22.381Z"
             },
             {
               "$type": "Document",
@@ -187,8 +185,7 @@
               "RelativeToolTip": "ViewModel\\VM_PrePayment.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAoAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T04:50:43.137Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T04:50:43.137Z"
             }
           ]
         }

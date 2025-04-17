@@ -71,9 +71,7 @@ namespace Server.Controller
                 case (byte)MsgId.PERIOD_EXTENSION:
                     Dbc.Update_regInfo(rcv_msg.User);
                     break;
-                case (byte)MsgId.INIT_PARKING_LIST:
-                    send_msg = Send_all_record();
-                    break;
+                
             }
             Send_messageAsync(send_msg, stream);
         }
@@ -131,30 +129,6 @@ namespace Server.Controller
                     ParkingTime = parking_time,
                     TotalFee = total_fee
                 }
-            };
-
-            return send_msg;
-        }
-
-        private Send_msg Send_all_record()
-        {
-            List<Entry_exit_record> recordList = Dbc.Select_all_record();
-            List<Record> parkingList = [];
-            foreach(var record in recordList)
-            {
-                Record park = new()
-                {
-                    VehicleNum = record.VehicleNum,
-                    EntryDate = Date_to_str(record.EntryDate),
-                    Classification = record.Classification
-                };
-                parkingList.Add(park);
-            }
-
-            Send_msg send_msg = new()
-            {
-                MsgId = (byte)MsgId.INIT_PARKING_LIST,
-                ParkingList = parkingList
             };
 
             return send_msg;

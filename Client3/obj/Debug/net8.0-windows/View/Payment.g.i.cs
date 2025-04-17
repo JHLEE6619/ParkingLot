@@ -53,7 +53,7 @@ namespace Client3.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Client3;V1.0.0.0;component/view/payment.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Client3;component/view/payment.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\Payment.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
