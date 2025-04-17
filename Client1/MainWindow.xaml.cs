@@ -47,8 +47,8 @@ public partial class MainWindow : System.Windows.Window
         video_entrance = new VideoCapture(filePath_entrance);
         video_exit = new VideoCapture(filePath_exit);
         video_parkingLot = new VideoCapture(filePath_parkingLot);
-        Task.Run(() => PlayVideoAsync(video_entrance, Img_Entrance, (byte)Network.MsgId.ENTER_VEHICLE, clnt_csharp));
-        //Task.Run(() => PlayVideoAsync(video_exit, Img_Exit, (byte)Network.MsgId.EXIT_VEHICLE, clnt_csharp));
+        //Task.Run(() => PlayVideoAsync(video_entrance, Img_Entrance, (byte)Network.MsgId.ENTER_VEHICLE, clnt_csharp));
+        Task.Run(() => PlayVideoAsync(video_exit, Img_Exit, (byte)Network.MsgId.EXIT_VEHICLE, clnt_csharp));
         //Task.Run(() => PlayVideoAsync(video_parkingLot, Img_ParkingLot, (byte)Network.MsgId.SEAT_INFO, clnt_python));
     }
 
@@ -99,7 +99,7 @@ public partial class MainWindow : System.Windows.Window
         int readOffset = 0; // 이미지 읽기용 오프셋
 
         int num = 1;
-        while (imgSize > 0)
+        while (remaining_imgSize > 0)
         {
             // 이미지 식별자
             serializedData = BitConverter.GetBytes(imgId);
@@ -118,11 +118,11 @@ public partial class MainWindow : System.Windows.Window
             if (remaining_imgSize < readSize) readSize = (int)remaining_imgSize;
             if (imgData == null) break;
             Array.Copy(imgData, readOffset, buf, offset, readSize);
-            await network.Stream.WriteAsync(buf).ConfigureAwait(false);
+            await network.Stream.WriteAsync(buf, 0, headerSize+readSize).ConfigureAwait(false);
 
             remaining_imgSize -= readSize;
             readOffset += readSize;
-            System.Diagnostics.Debug.WriteLine(readOffset);
+            System.Diagnostics.Debug.WriteLine(remaining_imgSize);
             offset = 0; 
         }
 

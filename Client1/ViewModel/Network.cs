@@ -112,10 +112,25 @@ namespace Client1.ViewModel
 
         private void Delete_Record(Receive_msg msg)
         {
-            MainWindow.Dispatcher.Invoke(() =>
+            Record exitRecord = Search_Record_by_VehicleNum(msg.Record.VehicleNum);
+            if (exitRecord != null)
             {
-                VM_Main.Record.Remove(msg.Record);
-            });
+                MainWindow.Dispatcher.Invoke(() =>
+                {
+                    VM_Main.Record.Remove(exitRecord);
+                    System.Diagnostics.Debug.WriteLine("출차 차량 주차 리스트 제거");
+                });
+            }
+        }
+
+        private Record Search_Record_by_VehicleNum(string vehicleNum)
+        {
+            foreach(var record in VM_Main.Record)
+            {
+                if(record.VehicleNum == vehicleNum)
+                    return record;
+            }
+            return null;
         }
 
         private void Update_seatInfo(Receive_msg msg)

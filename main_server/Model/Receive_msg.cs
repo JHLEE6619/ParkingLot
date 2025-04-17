@@ -3,7 +3,7 @@
     public class Receive_msg
     {
         public byte MsgId { get; set; }
-        public User User { get; set; }
-        public Record Record { get; set; }
+        public User User { get; set; } = new();
+        public Record Record { get; set; } = new();
     }
 }

@@ -8,16 +8,19 @@ namespace Server.Model
 {
     public class Date
     {
+        public const int fee = 500;
+        public const int perTenMin = 10;
+
         public int Dif_date(DateTime entryDate, DateTime exitDate)
         {
-            TimeSpan timeDiff = entryDate - exitDate;
+            TimeSpan timeDiff = exitDate - entryDate;
             int min = (int)timeDiff.TotalMinutes;
             return min;
         }
 
         public int Cal_totalFee(int parkingTime)
         {
-            int totalFee = (Fee.fee * parkingTime / 10);
+            int totalFee = (fee * parkingTime / perTenMin);
             return totalFee;
         }
 

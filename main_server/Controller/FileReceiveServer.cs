@@ -112,8 +112,8 @@ namespace Server.Controller
             string folderName = "";
             switch (imgType)
             {
-                case 5: folderName = "Entrance"; break;
-                case 6: folderName = "Exit"; break;
+                case (byte)MsgId.ENTER_VEHICLE: folderName = "Entrance"; break;
+                case (byte)MsgId.EXIT_VEHICLE: folderName = "Exit"; break;
             }
             string path = @$"/img/{folderName}";
 
@@ -136,31 +136,46 @@ namespace Server.Controller
         private void Handler(byte imgType, string imgPath, NetworkStream stream)
         {
             string vehicleNum = Num_detection.Execute(imgPath);
-            Receive_msg rcv_msg = new();
+            if (vehicleNum.Equals("")) return;
             Send_msg send_msg;
-            rcv_msg.Record.VehicleNum = vehicleNum;
             // 입차
             if (imgType == (byte)MsgId.ENTER_VEHICLE)
             {
-                send_msg = Show_entryRecord(rcv_msg); // 입차 시 처리 메서드
+                send_msg = Show_entryRecord(vehicleNum); // 입차 시 처리 메서드
                 Send_messageAsync(send_msg, Clients[1]);
                 Console.WriteLine("주차 기록 전송 완료");
             }
             // 출차
             else
             {
-                send_msg = Show_paymentInfo(rcv_msg);
-                Send_messageAsync(send_msg, Clients[4]); // 출차 차량 정보를 화면에 띄운다 -> 사전정산/정기등록 차량이면 결제화면 패스
+                Send_msg exit_msg = exit_vehicleNum(vehicleNum);
+                Send_messageAsync(exit_msg, Clients[1]);
+                send_msg = Show_paymentInfo(vehicleNum);
+                if (send_msg != null) 
+                { 
+                //Send_messageAsync(send_msg, Clients[4]); // 출차 차량 정보를 화면에 띄운다 -> 사전정산/정기등록 차량이면 결제화면 패스
+                }
             }
         }
 
-
-        private Send_msg Show_entryRecord(Receive_msg rcv_msg)
+        private Send_msg exit_vehicleNum(string vehicleNum)
         {
-            byte cls = Dbc.Select_expDate(rcv_msg.Record.VehicleNum);
-            Dbc.Insert_Entry_record(cls, rcv_msg.Record.VehicleNum);
+            Send_msg msg = new();
+            msg.MsgId = (byte)MsgId.EXIT_VEHICLE;
+            msg.Record = new()
+            {
+                VehicleNum = vehicleNum
+            };
+            return msg;
+        }
+
+
+        private Send_msg Show_entryRecord(string vehicleNum)
+        {
+            byte cls = Dbc.Select_expDate(vehicleNum);
+            Dbc.Insert_Entry_record(cls, vehicleNum);
             Console.WriteLine("주차기록 삽입 완료");
-            Entry_exit_record record = Dbc.Select_record(rcv_msg.Record.VehicleNum);
+            Entry_exit_record record = Dbc.Select_record(vehicleNum);
             string entry_date = Date_to_str(record.EntryDate);
             Send_msg send_msg = new()
             {
@@ -176,9 +191,9 @@ namespace Server.Controller
             return send_msg;
         }
 
-        private Send_msg Show_paymentInfo(Receive_msg rcv_msg)
+        private Send_msg Show_paymentInfo(string vehicleNum)
         {
-            Entry_exit_record record = Dbc.Select_record(rcv_msg.Record.VehicleNum);
+            Entry_exit_record record = Dbc.Select_record(vehicleNum);
 
             string entry_date = Date_to_str(record.EntryDate);
             DateTime now = DateTime.Now;
@@ -186,9 +201,10 @@ namespace Server.Controller
             int parkingTime = Dif_date(record.EntryDate, now);
             string parking_time = parkingTime + "분";
             int totalFee = Cal_totalFee(parkingTime);
+            if (totalFee <= 0) return null;
             string total_fee = totalFee.ToString() + "원";
             // 같은 시점에서 업데이트하면 안되고, 결제하는 시점으로 바뀌어야함
-            Dbc.Update_exitRecord(rcv_msg.Record.VehicleNum, now, totalFee);
+            Dbc.Update_exitRecord(vehicleNum, now, totalFee);
             Send_msg send_msg = new()
             {
                 MsgId = (byte)MsgId.PAYMENT,

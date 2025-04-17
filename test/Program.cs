@@ -24,17 +24,25 @@ namespace test
 
         static void Main(string[] args)
         {
-            Color.Add(new() { A = 1 });
-            Color.Add(new() { A = 2 });
-            Color.Add(new() { A = 3 });
+            DateTime dateTime = new(new DateOnly(2025, 3, 17), new TimeOnly(19, 0)); 
+            DateTime now = DateTime.Now;
+            int parkingTime = Dif_date(dateTime, now);
+            Console.WriteLine(Cal_totalFee(parkingTime));
 
-            Color.RemoveAt(0);
-            Console.WriteLine(Color[0].A);
-            Console.WriteLine(Color[1].A);
-            Color.Insert(0, new() { A = 1 });
-            Console.WriteLine(Color[0].A);
-            Console.WriteLine(Color[1].A);
 
+        }
+
+        public static int Dif_date(DateTime entryDate, DateTime exitDate)
+        {
+            TimeSpan timeDiff = exitDate - entryDate;
+            int min = (int)timeDiff.TotalMinutes;
+            return min;
+        }
+
+        public static int Cal_totalFee(int parkingTime)
+        {
+            int totalFee = (500 * parkingTime / 10);
+            return totalFee;
         }
     }
 }
