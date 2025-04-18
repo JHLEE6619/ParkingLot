@@ -13,7 +13,6 @@ namespace anprCsharpDotnet1
 {
   public class Num_detection
   {
-
         [DllImport("tsanpr.dll")]
             static extern IntPtr anpr_initialize(
                 [MarshalAs(UnmanagedType.LPUTF8Str)] string outputFormat); // [IN] 오류 발생시 출력 데이터 형식
@@ -47,9 +46,7 @@ namespace anprCsharpDotnet1
 
         static string readFile(string imgfile, string outputFormat, string options)
         {
-            Console.WriteLine("1");
             IntPtr result = anpr_read_file(imgfile, outputFormat, options);
-            Console.WriteLine("2");
             return ptrToUtf8(result);
         }
 

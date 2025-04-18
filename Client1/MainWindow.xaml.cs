@@ -35,8 +35,8 @@ public partial class MainWindow : System.Windows.Window
         InitializeComponent();
         VM_main = new();
         clnt_entrance = new(this, VM_main, 10001);
-        clnt_exit = new(this, VM_main, 10003);
-        clnt_cctv = new(this, VM_main, 10002);
+        clnt_exit = new(this, VM_main, 10001);
+        //clnt_cctv = new(this, VM_main, 10002);
         InitializeVideo();
         DataContext = VM_main;
     }
@@ -51,7 +51,7 @@ public partial class MainWindow : System.Windows.Window
         video_parkingLot = new VideoCapture(filePath_parkingLot);
         Task.Run(() => PlayVideoAsync(video_entrance, Img_Entrance, (byte)Network.MsgId.ENTER_VEHICLE, clnt_entrance));
         Task.Run(() => PlayVideoAsync(video_exit, Img_Exit, (byte)Network.MsgId.EXIT_VEHICLE, clnt_exit));
-        Task.Run(() => PlayVideoAsync(video_parkingLot, Img_ParkingLot, (byte)Network.MsgId.SEAT_INFO, clnt_cctv));
+        //Task.Run(() => PlayVideoAsync(video_parkingLot, Img_ParkingLot, (byte)Network.MsgId.SEAT_INFO, clnt_cctv));
     }
 
     private async Task PlayVideoAsync(VideoCapture video, Image img, byte msgId, Network network)
@@ -80,7 +80,7 @@ public partial class MainWindow : System.Windows.Window
                 // 이미지 바이너리 데이터 생성
                 Cv2.ImEncode(".jpg", matImage, out byte[] imgData);
                 // 서버 전송 메서드
-                Send_imgAsync(imgData, msgId, network);                 
+                Send_imgAsync(imgData, msgId, network);
                 captureTimer.Restart(); // 타이머 리셋
             }
             Thread.Sleep(33);
@@ -126,11 +126,11 @@ public partial class MainWindow : System.Windows.Window
             if (remaining_imgSize < readSize) readSize = (int)remaining_imgSize;
             if (imgData == null) break;
             Array.Copy(imgData, readOffset, buf, offset, readSize);
-            await network.Stream.WriteAsync(buf, 0, headerSize+readSize).ConfigureAwait(false);
+            await network.Stream.WriteAsync(buf, 0, headerSize + readSize).ConfigureAwait(false);
 
             remaining_imgSize -= readSize;
             readOffset += readSize;
-            offset = 0; 
+            offset = 0;
         }
 
         System.Diagnostics.Debug.WriteLine("이미지 전송");

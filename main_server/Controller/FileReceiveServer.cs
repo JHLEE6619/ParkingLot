@@ -83,7 +83,7 @@ namespace Server.Controller
                 imgId = BitConverter.ToInt32(buf.AsSpan()[0..4]);
                 imgSize = BitConverter.ToInt64(buf.AsSpan()[4..12]);
                 imgType = buf[12];
-                
+
                 imgBinary = buf[13..len];
                 ImgOffset.TryAdd(imgId, offset); // TryAdd 키가 없으면 추가하고 true 반환, 있으면 추가하지 않고 false 반환
 
@@ -94,11 +94,11 @@ namespace Server.Controller
 
                 string imgPath = Write_img(imgBinary, imgId, imgType, ImgOffset[imgId], writeSize);
                 ImgOffset[imgId] += imgBinary.Length; // 실제로 읽은만큼 offset
-                if(imgSize == ImgOffset[imgId])
+                if (imgSize == ImgOffset[imgId])
                 {
                     Console.WriteLine($"이미지 타입 : {imgType}\n 이미지 ID : {imgId}");
                     Console.WriteLine("이미지 저장 완료");
-                    Handler(imgType,imgPath,stream);
+                    Handler(imgType, imgPath, stream);
                 }
             }
         }
@@ -171,14 +171,14 @@ namespace Server.Controller
                 Console.WriteLine("주차 기록 전송 완료");
             }
             // 출차
-            else if(imgType == (byte)MsgId.EXIT_VEHICLE)
+            else if (imgType == (byte)MsgId.EXIT_VEHICLE)
             {
                 Send_msg exit_msg = exit_vehicleNum(vehicleNum);
                 Send_messageAsync(exit_msg, Program.Clients[1]);
                 send_msg = Show_paymentInfo(vehicleNum);
-                if (send_msg != null) 
-                { 
-                //Send_messageAsync(send_msg, Clients[4]); // 출차 차량 정보를 화면에 띄운다 -> 사전정산/정기등록 차량이면 결제화면 패스
+                if (send_msg != null)
+                {
+                    //Send_messageAsync(send_msg, Clients[4]); // 출차 차량 정보를 화면에 띄운다 -> 사전정산/정기등록 차량이면 결제화면 패스
                 }
             }
         }
