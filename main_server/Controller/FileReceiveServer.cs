@@ -16,12 +16,12 @@ namespace Server.Controller
     {
         public Dictionary<int, int> ImgOffset { get; set; } = [];
         public DBC Dbc { get; set; }
-        public Dictionary<byte, NetworkStream> Clients { get; set; } = [];
+        public static Dictionary<byte, NetworkStream> Clients { get; set; } = [];
+        readonly object lock1 = new();
 
-        public FileReceiveServer()
+        public FileReceiveServer(int port)
         {
-            Clients.Add(1, null);
-            Clients.Add(4, null);
+            StartFileRcvServer(port);
         }
 
         enum MsgId
@@ -33,9 +33,9 @@ namespace Server.Controller
             Normal, PrePayment, Registration
         }
 
-        public async Task StartFileRcvServer()
+        public async Task StartFileRcvServer(int port)
         {
-            TcpListener listener = new TcpListener(IPAddress.Any, 10001);
+            TcpListener listener = new TcpListener(IPAddress.Any, port);
             this.Dbc = new();
             Console.WriteLine(" 파일 전송서버 시작 ");
             listener.Start();
@@ -44,32 +44,45 @@ namespace Server.Controller
                 TcpClient client =
                     await listener.AcceptTcpClientAsync().ConfigureAwait(false);
 
-                Task.Run(() => ServerMain(client));
+                Task.Run(() => ServerMain(client, port));
             }
         }
 
         // 클라이언트 별로 다른 스레드가 실행하는 메소드
-        private async Task ServerMain(Object client)
+        private async Task ServerMain(Object client, int port)
         {
-            // 연결됨과 동시에 클라이언트에서 1바이트를보낸다.
-            // 1바이트 수신 : 1 -> Client1, 4 -> Client4
             TcpClient tc = (TcpClient)client;
             NetworkStream stream = tc.GetStream(); // Client1, Client4가 연결됨
-            byte[] clnt_num = new byte[1];
             Console.WriteLine(" 클라이언트 연결됨 ");
-            await stream.ReadAsync(clnt_num).ConfigureAwait(false);
-            Clients[clnt_num[0]] = stream;
             // Client1이 연결되면 주차리스트 보내기
-            if (clnt_num[0] == 1)
+            if (port == 10001)
             {
-                await Send_messageAsync(Send_all_record(), Clients[clnt_num[0]]);
-                Console.WriteLine("주차 기록 전송 완료");
+                lock (lock1)
+                {
+                    Clients[1] = stream;
+                }
+                await Send_messageAsync(Send_all_record(), stream);
+                Console.WriteLine("주차 기록 초기화");
+            }
+            else if(port == 10003)
+            {
+                lock (lock1)
+                {
+                    Clients[2] = stream;
+                }
+            }
+            else if(port == 10004)
+            {
+                lock (lock1)
+                {
+                    Clients[4] = stream;
+                }
             }
 
 
-            // 헤더 : 이미지식별자(int), 이미지 크기(int), 이미지 유형(byte) 
-            // 바디 : 이미지 binary 데이터
-            byte[] buf = new byte[1024];
+                // 헤더 : 이미지식별자(int), 이미지 크기(int), 이미지 유형(byte) 
+                // 바디 : 이미지 binary 데이터
+                byte[] buf = new byte[1024];
             int imgId;
             long imgSize;
             byte imgType;
@@ -89,6 +102,8 @@ namespace Server.Controller
                 imgId = BitConverter.ToInt32(buf.AsSpan()[0..4]);
                 imgSize = BitConverter.ToInt64(buf.AsSpan()[4..12]);
                 imgType = buf[12];
+                Console.WriteLine($"이미지 타입 : {imgType}\n 이미지 ID : {imgId}");
+                
                 imgBinary = buf[13..len];
                 ImgOffset.TryAdd(imgId, offset); // TryAdd 키가 없으면 추가하고 true 반환, 있으면 추가하지 않고 false 반환
 

@@ -23,8 +23,9 @@ public partial class MainWindow : System.Windows.Window
     private VideoCapture video_entrance;
     private VideoCapture video_exit;
     private VideoCapture video_parkingLot;
-    public Network clnt_csharp;
-    public Network clnt_python;
+    public Network clnt_entrance;
+    public Network clnt_exit;
+    public Network clnt_cctv;
     public VM_Main VM_main;
     uint imgId = 0;
     object lockobj = new();
@@ -33,8 +34,9 @@ public partial class MainWindow : System.Windows.Window
     {
         InitializeComponent();
         VM_main = new();
-        clnt_csharp = new(this, VM_main, 10001);
-        clnt_python = new(this, VM_main, 10002);
+        clnt_entrance = new(this, VM_main, 10001);
+        clnt_exit = new(this, VM_main, 10003);
+       clnt_cctv = new(this, VM_main, 10002);
         InitializeVideo();
         DataContext = VM_main;
     }
@@ -47,9 +49,9 @@ public partial class MainWindow : System.Windows.Window
         video_entrance = new VideoCapture(filePath_entrance);
         video_exit = new VideoCapture(filePath_exit);
         video_parkingLot = new VideoCapture(filePath_parkingLot);
-        //Task.Run(() => PlayVideoAsync(video_entrance, Img_Entrance, (byte)Network.MsgId.ENTER_VEHICLE, clnt_csharp));
-        Task.Run(() => PlayVideoAsync(video_exit, Img_Exit, (byte)Network.MsgId.EXIT_VEHICLE, clnt_csharp));
-        //Task.Run(() => PlayVideoAsync(video_parkingLot, Img_ParkingLot, (byte)Network.MsgId.SEAT_INFO, clnt_python));
+        Task.Run(() => PlayVideoAsync(video_entrance, Img_Entrance, (byte)Network.MsgId.ENTER_VEHICLE, clnt_entrance));
+        Task.Run(() => PlayVideoAsync(video_exit, Img_Exit, (byte)Network.MsgId.EXIT_VEHICLE, clnt_exit));
+       Task.Run(() => PlayVideoAsync(video_parkingLot, Img_ParkingLot, (byte)Network.MsgId.SEAT_INFO, clnt_cctv));
     }
 
     private async Task PlayVideoAsync(VideoCapture video, Image img, byte msgId, Network network)
@@ -73,7 +75,7 @@ public partial class MainWindow : System.Windows.Window
             });
 
             // 3초마다 이미지 저장
-            if (captureTimer.ElapsedMilliseconds >= 3000)
+            if (captureTimer.ElapsedMilliseconds >= 2000)
             {
                 // 이미지 바이너리 데이터 생성
                 Cv2.ImEncode(".jpg", matImage, out byte[] imgData);
@@ -88,6 +90,12 @@ public partial class MainWindow : System.Windows.Window
 
     private async Task Send_imgAsync(byte[] imgData, byte msgId, Network network)
     {
+        uint img_id;
+        lock (lockobj)
+        {
+            img_id = imgId++;
+        }
+
         long imgSize = imgData.Length; // 이미지 사이즈
         long remaining_imgSize = imgSize;
         byte[] imgType = [msgId]; // 이미지 타입(0 : 입구 , 1 : 출구, 2 : 주차장)
@@ -102,7 +110,7 @@ public partial class MainWindow : System.Windows.Window
         while (remaining_imgSize > 0)
         {
             // 이미지 식별자
-            serializedData = BitConverter.GetBytes(imgId);
+            serializedData = BitConverter.GetBytes(img_id);
             Array.Copy(serializedData, 0, buf, offset, serializedData.Length);
             offset += sizeof(int);
 
@@ -122,14 +130,9 @@ public partial class MainWindow : System.Windows.Window
 
             remaining_imgSize -= readSize;
             readOffset += readSize;
-            System.Diagnostics.Debug.WriteLine(remaining_imgSize);
             offset = 0; 
         }
 
-        lock (lockobj)
-        {
-            imgId++;
-        }
         System.Diagnostics.Debug.WriteLine("이미지 전송");
     }
 }

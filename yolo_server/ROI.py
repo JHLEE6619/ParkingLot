@@ -1,7 +1,7 @@
 import cv2
 import json
 
-img = cv2.imread('test.png')
+img = cv2.imread('binary.jpg')
 rois = []
 
 # 마우스로 ROI 지정
@@ -25,10 +25,10 @@ cv2.destroyAllWindows()
 
 roi_dicts = [list(roi) for roi in rois]
 
-with open("rois.json", "w") as f:
+with open("test.json", "w") as f:
     json.dump(roi_dicts, f) # indent=2 : 들여쓰기 2칸
 
-with open("rois.json", "r") as f:
+with open("test.json", "r") as f:
     ROI = json.load(f)
 
 print(ROI)

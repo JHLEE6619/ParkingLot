@@ -12,21 +12,18 @@ async def handler(reader, writer):
         data = await reader.read(1024)  # 1024바이트씩 읽는다
         if not data:
             break  # 연결 종료
-        data_received(data,writer)
-        print("데이터 수신 완료")
+        await data_received(data,writer)
 
     print("Connection closed")
     writer.close()
     await writer.wait_closed()
 
-def data_received(data,writer):
-    print("데이터 수신 받음")
-    imgId = int(data[0:4].decode())
-    imgSize = int(data[4:12].decode())
+async def data_received(data,writer):
+    imgId = int.from_bytes(data[0:4],byteorder="little")
+    imgSize = int.from_bytes(data[4:12], byteorder="little")
     imgType = data[12]
     imgData = data[13:]
     imgInfo = {'imgId':imgId, 'imgSize':imgSize, 'imgType':imgType}
-    print(f"이미지 정보 {imgInfo}")
     check_imgList(imgInfo)
     imgBinary = make_imgBinary(imgInfo, imgData)
     # 이미지를 모두 수신했으면 빈자리 판단
@@ -34,20 +31,17 @@ def data_received(data,writer):
         print("이미지 모두 전송 받음")
         seatInfo = yolo.judge_vacantSeat(imgBinary)
         print("주차 자리 정보 생성 완료")
-        send_seatInfo(seatInfo,writer)
+        await send_seatInfo(seatInfo,writer)
         print("주차 자리 정보 전송 완료")
 
 def check_imgList(imgInfo):
     # 이미지 리스트를 조회해서 imgId가 없으면 리스트에 추가
-    check = True
     for img in imgList:
         if img['imgId'] == imgInfo['imgId']:
-            check = False
-            break
-
-    if not check:
-        imgInfo['imgOffset'] = 0
-        imgList.append(imgInfo)
+            return
+    imgInfo['imgOffset'] = 0
+    imgInfo['imgData'] = bytes()
+    imgList.append(imgInfo)
 
 def make_imgBinary(imgInfo, imgData):
     for img in imgList:

@@ -31,10 +31,6 @@ namespace Client1.ViewModel
             this.VM_Main = vm_main;
             this.Clnt = new TcpClient("127.0.0.1", port);
             this.Stream = this.Clnt.GetStream();
-            if (port == 10001) { 
-                byte[] buf = [1];
-                Stream.Write(buf);
-            }
             Task.Run(() => Receive_messageAsync());
         }
 
@@ -58,7 +54,7 @@ namespace Client1.ViewModel
         private async Task Receive_messageAsync()
         {
             Receive_msg msg = new();
-            byte[] buf = new byte[4096];
+            byte[] buf = new byte[10000];
             try
             {
                 while (true)
@@ -106,7 +102,8 @@ namespace Client1.ViewModel
         {
             MainWindow.Dispatcher.Invoke(() =>
             {
-                VM_Main.Record.Add(msg.Record);
+                if(Search_Record_by_VehicleNum(msg.Record.VehicleNum) == null)
+                    VM_Main.Record.Add(msg.Record);
             });
         }
 
@@ -136,10 +133,10 @@ namespace Client1.ViewModel
         private void Update_seatInfo(Receive_msg msg)
         {
             int idx = 0;
+            string deb = "";
             foreach (var info in msg.SeatInfo)
             {
                 // 주차된 자리
-
                 if (info == 1)
                 {
                     MainWindow.Dispatcher.Invoke(() =>
@@ -158,7 +155,9 @@ namespace Client1.ViewModel
                     });
                 }
                 idx++;
+                deb += info;
             }
+            System.Diagnostics.Debug.WriteLine(deb);
         }
     }
 }
