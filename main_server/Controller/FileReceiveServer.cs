@@ -16,7 +16,6 @@ namespace Server.Controller
     {
         public Dictionary<int, int> ImgOffset { get; set; } = [];
         public DBC Dbc { get; set; }
-        public static Dictionary<byte, NetworkStream> Clients { get; set; } = [];
         readonly object lock1 = new();
 
         public FileReceiveServer(int port)
@@ -55,34 +54,16 @@ namespace Server.Controller
             NetworkStream stream = tc.GetStream(); // Client1, Client4가 연결됨
             Console.WriteLine(" 클라이언트 연결됨 ");
             // Client1이 연결되면 주차리스트 보내기
+            Save_clnt(port, stream);
             if (port == 10001)
             {
-                lock (lock1)
-                {
-                    Clients[1] = stream;
-                }
                 await Send_messageAsync(Send_all_record(), stream);
                 Console.WriteLine("주차 기록 초기화");
             }
-            else if(port == 10003)
-            {
-                lock (lock1)
-                {
-                    Clients[2] = stream;
-                }
-            }
-            else if(port == 10004)
-            {
-                lock (lock1)
-                {
-                    Clients[4] = stream;
-                }
-            }
 
-
-                // 헤더 : 이미지식별자(int), 이미지 크기(int), 이미지 유형(byte) 
-                // 바디 : 이미지 binary 데이터
-                byte[] buf = new byte[1024];
+            // 헤더 : 이미지식별자(int), 이미지 크기(int), 이미지 유형(byte) 
+            // 바디 : 이미지 binary 데이터
+            byte[] buf = new byte[1024];
             int imgId;
             long imgSize;
             byte imgType;
@@ -102,7 +83,6 @@ namespace Server.Controller
                 imgId = BitConverter.ToInt32(buf.AsSpan()[0..4]);
                 imgSize = BitConverter.ToInt64(buf.AsSpan()[4..12]);
                 imgType = buf[12];
-                Console.WriteLine($"이미지 타입 : {imgType}\n 이미지 ID : {imgId}");
                 
                 imgBinary = buf[13..len];
                 ImgOffset.TryAdd(imgId, offset); // TryAdd 키가 없으면 추가하고 true 반환, 있으면 추가하지 않고 false 반환
@@ -116,8 +96,34 @@ namespace Server.Controller
                 ImgOffset[imgId] += imgBinary.Length; // 실제로 읽은만큼 offset
                 if(imgSize == ImgOffset[imgId])
                 {
+                    Console.WriteLine($"이미지 타입 : {imgType}\n 이미지 ID : {imgId}");
                     Console.WriteLine("이미지 저장 완료");
                     Handler(imgType,imgPath,stream);
+                }
+            }
+        }
+
+        private void Save_clnt(int port, NetworkStream stream)
+        {
+            if (port == 10001)
+            {
+                lock (lock1)
+                {
+                    Program.Clients[1] = stream;
+                }
+            }
+            else if (port == 10003)
+            {
+                lock (lock1)
+                {
+                    Program.Clients[2] = stream;
+                }
+            }
+            else if (port == 10004)
+            {
+                lock (lock1)
+                {
+                    Program.Clients[4] = stream;
                 }
             }
         }
@@ -150,21 +156,25 @@ namespace Server.Controller
 
         private void Handler(byte imgType, string imgPath, NetworkStream stream)
         {
-            string vehicleNum = Num_detection.Execute(imgPath);
+            string vehicleNum;
+            lock (lock1)
+            {
+                vehicleNum = Num_detection.Execute(imgPath);
+            }
             if (vehicleNum.Equals("")) return;
             Send_msg send_msg;
             // 입차
             if (imgType == (byte)MsgId.ENTER_VEHICLE)
             {
                 send_msg = Show_entryRecord(vehicleNum); // 입차 시 처리 메서드
-                Send_messageAsync(send_msg, Clients[1]);
+                Send_messageAsync(send_msg, Program.Clients[1]);
                 Console.WriteLine("주차 기록 전송 완료");
             }
             // 출차
-            else
+            else if(imgType == (byte)MsgId.EXIT_VEHICLE)
             {
                 Send_msg exit_msg = exit_vehicleNum(vehicleNum);
-                Send_messageAsync(exit_msg, Clients[1]);
+                Send_messageAsync(exit_msg, Program.Clients[1]);
                 send_msg = Show_paymentInfo(vehicleNum);
                 if (send_msg != null) 
                 { 

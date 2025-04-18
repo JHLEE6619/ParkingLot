@@ -36,7 +36,7 @@ public partial class MainWindow : System.Windows.Window
         VM_main = new();
         clnt_entrance = new(this, VM_main, 10001);
         clnt_exit = new(this, VM_main, 10003);
-       clnt_cctv = new(this, VM_main, 10002);
+        clnt_cctv = new(this, VM_main, 10002);
         InitializeVideo();
         DataContext = VM_main;
     }
@@ -51,7 +51,7 @@ public partial class MainWindow : System.Windows.Window
         video_parkingLot = new VideoCapture(filePath_parkingLot);
         Task.Run(() => PlayVideoAsync(video_entrance, Img_Entrance, (byte)Network.MsgId.ENTER_VEHICLE, clnt_entrance));
         Task.Run(() => PlayVideoAsync(video_exit, Img_Exit, (byte)Network.MsgId.EXIT_VEHICLE, clnt_exit));
-       Task.Run(() => PlayVideoAsync(video_parkingLot, Img_ParkingLot, (byte)Network.MsgId.SEAT_INFO, clnt_cctv));
+        Task.Run(() => PlayVideoAsync(video_parkingLot, Img_ParkingLot, (byte)Network.MsgId.SEAT_INFO, clnt_cctv));
     }
 
     private async Task PlayVideoAsync(VideoCapture video, Image img, byte msgId, Network network)
@@ -75,7 +75,7 @@ public partial class MainWindow : System.Windows.Window
             });
 
             // 3초마다 이미지 저장
-            if (captureTimer.ElapsedMilliseconds >= 2000)
+            if (captureTimer.ElapsedMilliseconds >= 3000)
             {
                 // 이미지 바이너리 데이터 생성
                 Cv2.ImEncode(".jpg", matImage, out byte[] imgData);

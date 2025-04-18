@@ -143,7 +143,7 @@ namespace Server.Controller
                             $"SET EXIT_DATE = '{ExitDate.ToString(dateFormat)}', " +
                             $"FEE = {TotalFee} " +
                             $"WHERE VEHICLE_NUM = '{vehicleNum}' AND EXIT_DATE IS NULL;";
-            Console.WriteLine(query);
+            Console.WriteLine("출차 쿼리 : " + query);
             MySqlCommand cmd = new MySqlCommand(query, Conn);
             try { cmd.ExecuteNonQuery(); }
             catch (Exception ex) { Console.WriteLine("Update_exitRecord"+ ex.Message) ; }

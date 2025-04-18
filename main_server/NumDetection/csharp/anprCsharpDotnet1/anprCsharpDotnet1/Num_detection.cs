@@ -47,7 +47,9 @@ namespace anprCsharpDotnet1
 
         static string readFile(string imgfile, string outputFormat, string options)
         {
+            Console.WriteLine("1");
             IntPtr result = anpr_read_file(imgfile, outputFormat, options);
+            Console.WriteLine("2");
             return ptrToUtf8(result);
         }
 

@@ -9,11 +9,12 @@ namespace Server
 {
     internal class Program
     {
+        public static Dictionary<byte, NetworkStream> Clients { get; set; } = [];
         static async Task Main(string[] args)
         {
-            FileReceiveServer.Clients.Add(1, null);
-            FileReceiveServer.Clients.Add(2, null);
-            FileReceiveServer.Clients.Add(4, null);
+            Clients.Add(1, null);
+            Clients.Add(2, null);
+            Clients.Add(4, null);
             FileReceiveServer entrance_Server = new(10001);
             FileReceiveServer exit_Server = new(10003);
             MainServer mainServer = new();
