@@ -178,7 +178,7 @@ namespace Server.Controller
                 send_msg = Show_paymentInfo(vehicleNum);
                 if (send_msg != null)
                 {
-                    //Send_messageAsync(send_msg, Clients[4]); // 출차 차량 정보를 화면에 띄운다 -> 사전정산/정기등록 차량이면 결제화면 패스
+                    //Send_messageAsync(send_msg, Program.Clients[4]); // 출차 차량 정보를 화면에 띄운다 -> 사전정산/정기등록 차량이면 결제화면 패스
                 }
             }
         }
