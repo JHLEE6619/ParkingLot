@@ -74,3 +74,41 @@ C:\Users\LMS\Desktop\ParkingLot\Client3\obj\Debug\net8.0-windows\refint\Client3.
 C:\Users\LMS\Desktop\ParkingLot\Client3\obj\Debug\net8.0-windows\Client3.pdb
 C:\Users\LMS\Desktop\ParkingLot\Client3\obj\Debug\net8.0-windows\Client3.genruntimeconfig.cache
 C:\Users\LMS\Desktop\ParkingLot\Client3\obj\Debug\net8.0-windows\ref\Client3.dll
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\bin\Debug\net8.0-windows\Client3.exe
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\bin\Debug\net8.0-windows\Client3.deps.json
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\bin\Debug\net8.0-windows\Client3.runtimeconfig.json
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\bin\Debug\net8.0-windows\Client3.dll
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\bin\Debug\net8.0-windows\Client3.pdb
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\bin\Debug\net8.0-windows\MySqlConnector.dll
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\obj\Debug\net8.0-windows\Client3.csproj.AssemblyReference.cache
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\obj\Debug\net8.0-windows\View\Main.g.cs
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\obj\Debug\net8.0-windows\View\Payment.g.cs
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\obj\Debug\net8.0-windows\View\Period_Extension.g.cs
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\obj\Debug\net8.0-windows\View\PrePayment.g.cs
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\obj\Debug\net8.0-windows\View\Registration.g.cs
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\obj\Debug\net8.0-windows\Client3_MarkupCompile.cache
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\obj\Debug\net8.0-windows\Client3_MarkupCompile.lref
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\obj\Debug\net8.0-windows\View\Main.baml
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\obj\Debug\net8.0-windows\View\Payment.baml
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\obj\Debug\net8.0-windows\View\Period_Extension.baml
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\obj\Debug\net8.0-windows\View\PrePayment.baml
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\obj\Debug\net8.0-windows\View\Registration.baml
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\obj\Debug\net8.0-windows\Client3.g.resources
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\obj\Debug\net8.0-windows\Client3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\obj\Debug\net8.0-windows\Client3.AssemblyInfoInputs.cache
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\obj\Debug\net8.0-windows\Client3.AssemblyInfo.cs
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\obj\Debug\net8.0-windows\Client3.csproj.CoreCompileInputs.cache
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\obj\Debug\net8.0-windows\Client3.sourcelink.json
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\obj\Debug\net8.0-windows\Client3.csproj.Up2Date
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\obj\Debug\net8.0-windows\Client3.dll
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\obj\Debug\net8.0-windows\refint\Client3.dll
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\obj\Debug\net8.0-windows\Client3.pdb
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\obj\Debug\net8.0-windows\Client3.genruntimeconfig.cache
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client3\obj\Debug\net8.0-windows\ref\Client3.dll

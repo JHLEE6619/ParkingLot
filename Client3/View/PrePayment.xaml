@@ -38,7 +38,7 @@
                     HorizontalAlignment="Left" VerticalAlignment="Center" Width="80" Height="30" Margin="20,0,0,0" Click="Btn_input_VehicleNum_Click" />
             <TextBlock Grid.Row="2" Text="[입차 일시]" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
                     VerticalAlignment="Center" Margin="20,0,0,0" />
-            <TextBlock Grid.Row="3" Text="{Binding Vehicle.EntryDate, Mode=OneWay}" TextWrapping="Wrap" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
+            <TextBlock Grid.Row="3" Text="{Binding Record.EntryDate, Mode=OneWay}" TextWrapping="Wrap" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
                     VerticalAlignment="Center" Margin="20,0,0,0" />
             <TextBlock Grid.Row="4" Text="[출차 일시]" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
                     VerticalAlignment="Center" Margin="20,0,0,0" />

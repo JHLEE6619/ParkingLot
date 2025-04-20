@@ -17,6 +17,7 @@ namespace Server
             Clients.Add(4, null);
             FileReceiveServer entrance_Server = new(10001);
             FileReceiveServer exit_Server = new(10003);
+            FileReceiveServer exit_Server2 = new(10004);
             MainServer mainServer = new();
             await mainServer.StartMainServer();
         }

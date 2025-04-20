@@ -17,7 +17,7 @@ namespace Server.Controller
         public DBC Dbc {get;set;}
         public enum MsgId
         {
-            ENTRY_RECORD, PAYMENT, REGISTRATION, PERIOD_EXTENSION, INIT_PARKING_LIST
+            ENTRY_RECORD, PAYMENT, REGISTRATION, PERIOD_EXTENSION, UPDATE_CLASSIFICATION
         }
 
         public async Task StartMainServer()
@@ -36,8 +36,8 @@ namespace Server.Controller
 
         private async Task ServerMainAsync(TcpClient clnt)
         {
-            DBC dbc = new();
-            this.Dbc = dbc;
+            this.Dbc = new();
+            Console.WriteLine("클라이언트3/4 연결");
             Console.WriteLine("DB 연결");
             byte[] buf = new byte[1024];
             Receive_msg msg;
@@ -63,15 +63,19 @@ namespace Server.Controller
                     break;
                 // 사전 / 출차 정산
                 case (byte)MsgId.PAYMENT:
-                    Show_paymentInfo(rcv_msg);
+                    send_msg = Show_paymentInfo(rcv_msg);
                     break;
                 case (byte)MsgId.REGISTRATION:
                     Dbc.Insert_regInfo(rcv_msg.User);
+                    Dbc.Update_classification(rcv_msg.User.VehicleNum, 2);
                     break;
                 case (byte)MsgId.PERIOD_EXTENSION:
                     Dbc.Update_regInfo(rcv_msg.User);
                     break;
-                
+                case (byte)MsgId.UPDATE_CLASSIFICATION:
+                    Dbc.Update_classification(rcv_msg.Record.VehicleNum, rcv_msg.Record.Classification);
+                    break;
+
             }
             Send_messageAsync(send_msg, stream);
         }

@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "2i2Bf+62S4s=",
+  "dgSpecHash": "83MzZ83BnfY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\LMS\\Desktop\\ParkingLot\\main_server\\Server.csproj",
+  "projectFilePath": "C:\\Users\\ljh49\\OneDrive\\바탕 화면\\ParkingLot\\main_server\\Server.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\LMS\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
-    "C:\\Users\\LMS\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
-    "C:\\Users\\LMS\\.nuget\\packages\\microsoft.win32.systemevents\\9.0.4\\microsoft.win32.systemevents.9.0.4.nupkg.sha512",
-    "C:\\Users\\LMS\\.nuget\\packages\\mysqlconnector\\2.4.0\\mysqlconnector.2.4.0.nupkg.sha512",
-    "C:\\Users\\LMS\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
-    "C:\\Users\\LMS\\.nuget\\packages\\system.drawing.common\\9.0.4\\system.drawing.common.9.0.4.nupkg.sha512"
+    "C:\\Users\\ljh49\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\ljh49\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\ljh49\\.nuget\\packages\\microsoft.win32.systemevents\\9.0.4\\microsoft.win32.systemevents.9.0.4.nupkg.sha512",
+    "C:\\Users\\ljh49\\.nuget\\packages\\mysqlconnector\\2.4.0\\mysqlconnector.2.4.0.nupkg.sha512",
+    "C:\\Users\\ljh49\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\ljh49\\.nuget\\packages\\system.drawing.common\\9.0.4\\system.drawing.common.9.0.4.nupkg.sha512"
   ],
   "logs": []
 }

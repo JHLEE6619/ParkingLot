@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client1\\Client1.csproj": {}
+    "C:\\Users\\ljh49\\OneDrive\\바탕 화면\\ParkingLot\\Client1\\Client1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client1\\Client1.csproj": {
+    "C:\\Users\\ljh49\\OneDrive\\바탕 화면\\ParkingLot\\Client1\\Client1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client1\\Client1.csproj",
+        "projectUniqueName": "C:\\Users\\ljh49\\OneDrive\\바탕 화면\\ParkingLot\\Client1\\Client1.csproj",
         "projectName": "Client1",
-        "projectPath": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client1\\Client1.csproj",
-        "packagesPath": "C:\\Users\\LMS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client1\\obj\\",
+        "projectPath": "C:\\Users\\ljh49\\OneDrive\\바탕 화면\\ParkingLot\\Client1\\Client1.csproj",
+        "packagesPath": "C:\\Users\\ljh49\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ljh49\\OneDrive\\바탕 화면\\ParkingLot\\Client1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\LMS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ljh49\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -90,7 +90,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

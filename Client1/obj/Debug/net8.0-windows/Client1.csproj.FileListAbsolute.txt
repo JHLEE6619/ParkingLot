@@ -61,3 +61,34 @@ C:\Users\LMS\Desktop\ParkingLot\Client1\obj\Debug\net8.0-windows\refint\Client1.
 C:\Users\LMS\Desktop\ParkingLot\Client1\obj\Debug\net8.0-windows\Client1.pdb
 C:\Users\LMS\Desktop\ParkingLot\Client1\obj\Debug\net8.0-windows\Client1.genruntimeconfig.cache
 C:\Users\LMS\Desktop\ParkingLot\Client1\obj\Debug\net8.0-windows\ref\Client1.dll
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client1\bin\Debug\net8.0-windows\Client1.exe
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client1\bin\Debug\net8.0-windows\Client1.deps.json
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client1\bin\Debug\net8.0-windows\Client1.runtimeconfig.json
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client1\bin\Debug\net8.0-windows\Client1.dll
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client1\bin\Debug\net8.0-windows\Client1.pdb
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client1\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client1\bin\Debug\net8.0-windows\OpenCvSharp.dll
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client1\bin\Debug\net8.0-windows\OpenCvSharp.Extensions.dll
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client1\bin\Debug\net8.0-windows\OpenCvSharp.WpfExtensions.dll
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client1\bin\Debug\net8.0-windows\runtimes\win-x64\native\OpenCvSharpExtern.dll
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client1\bin\Debug\net8.0-windows\runtimes\win-x64\native\opencv_videoio_ffmpeg4100_64.dll
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client1\bin\Debug\net8.0-windows\runtimes\win-x86\native\OpenCvSharpExtern.dll
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client1\bin\Debug\net8.0-windows\runtimes\win-x86\native\opencv_videoio_ffmpeg4100.dll
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client1\obj\Debug\net8.0-windows\Client1.csproj.AssemblyReference.cache
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client1\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client1\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client1\obj\Debug\net8.0-windows\Client1_MarkupCompile.cache
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client1\obj\Debug\net8.0-windows\Client1_MarkupCompile.lref
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client1\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client1\obj\Debug\net8.0-windows\Client1.g.resources
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client1\obj\Debug\net8.0-windows\Client1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client1\obj\Debug\net8.0-windows\Client1.AssemblyInfoInputs.cache
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client1\obj\Debug\net8.0-windows\Client1.AssemblyInfo.cs
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client1\obj\Debug\net8.0-windows\Client1.csproj.CoreCompileInputs.cache
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client1\obj\Debug\net8.0-windows\Client1.sourcelink.json
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client1\obj\Debug\net8.0-windows\Client1.csproj.Up2Date
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client1\obj\Debug\net8.0-windows\Client1.dll
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client1\obj\Debug\net8.0-windows\refint\Client1.dll
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client1\obj\Debug\net8.0-windows\Client1.pdb
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client1\obj\Debug\net8.0-windows\Client1.genruntimeconfig.cache
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client1\obj\Debug\net8.0-windows\ref\Client1.dll

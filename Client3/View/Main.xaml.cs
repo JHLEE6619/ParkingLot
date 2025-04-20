@@ -24,5 +24,23 @@ namespace Client3.View
         {
             InitializeComponent();
         }
+
+        private void Btn_prepayment_Click(object sender, RoutedEventArgs e)
+        {
+            PrePayment page = new();
+            this.NavigationService.Navigate(page);
+        }
+
+        private void Btn_Registration_Click(object sender, RoutedEventArgs e)
+        {
+            Registration page = new();
+            this.NavigationService.Navigate(page);
+        }
+
+        private void Btn_period_extension_Click(object sender, RoutedEventArgs e)
+        {
+            Period_Extension page = new();
+            this.NavigationService.Navigate(page);
+        }
     }
 }

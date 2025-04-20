@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Q6n9MvISTKg=",
+  "dgSpecHash": "sr2HzMZLf00=",
   "success": true,
-  "projectFilePath": "C:\\Users\\LMS\\Desktop\\ParkingLot\\Client4\\Client4.csproj",
+  "projectFilePath": "C:\\Users\\ljh49\\OneDrive\\바탕 화면\\ParkingLot\\Client4\\Client4.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\LMS\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\ljh49\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }

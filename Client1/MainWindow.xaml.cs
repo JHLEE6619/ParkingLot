@@ -35,7 +35,7 @@ public partial class MainWindow : System.Windows.Window
         InitializeComponent();
         VM_main = new();
         clnt_entrance = new(this, VM_main, 10001);
-        clnt_exit = new(this, VM_main, 10001);
+        clnt_exit = new(this, VM_main, 10003);
         //clnt_cctv = new(this, VM_main, 10002);
         InitializeVideo();
         DataContext = VM_main;
@@ -43,9 +43,9 @@ public partial class MainWindow : System.Windows.Window
 
     private void InitializeVideo()
     {
-        string filePath_entrance = @"C:/Users/LMS/Desktop/video/Entrance.mp4";
-        string filePath_exit = @"C:/Users/LMS/Desktop/video/Exit.mp4";
-        string filePath_parkingLot = @"C:/Users/LMS/Desktop/video/parking_lot.mp4";
+        string filePath_entrance = @"C:\Users\ljh49\OneDrive\바탕 화면\video\Entrance.mp4";
+        string filePath_exit = @"C:\Users\ljh49\OneDrive\바탕 화면\video\Exit.mp4";
+        string filePath_parkingLot = @"C:\Users\ljh49\OneDrive\바탕 화면\video\parking_lot.mp4";
         video_entrance = new VideoCapture(filePath_entrance);
         video_exit = new VideoCapture(filePath_exit);
         video_parkingLot = new VideoCapture(filePath_parkingLot);

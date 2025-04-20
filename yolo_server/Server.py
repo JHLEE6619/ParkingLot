@@ -1,7 +1,5 @@
 import asyncio
 import orjson
-import socket
-from enum import IntEnum, auto
 from Car_detection import Car_Detection
 
 async def handler(reader, writer):

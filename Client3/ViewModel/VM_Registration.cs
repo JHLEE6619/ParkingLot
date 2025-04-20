@@ -16,9 +16,11 @@ namespace Client3.ViewModel
         public string SelectedItem { get; set; }
         public Command Registration;
         public Command PeriodExtension;
+        public Network Network { get; set; }
         
         public VM_Registration() 
         {
+            Network = new Network();
             Registration = new Command(Send_regInfo);
             PeriodExtension = new Command(Send_extensionInfo);
             Items = ["1일 - 20,000원", "1주일 - 50,000원", "1개월(30일) - 120,000원"];

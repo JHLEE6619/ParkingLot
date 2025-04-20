@@ -102,13 +102,13 @@ namespace Server.Controller
         }
 
         // 차량 구분 업데이트
-        public void Update_classfication(string vehicleNum, byte cls)
+        public void Update_classification(string vehicleNum, byte cls)
         {
             string query = $"UPDATE ENTRY_EXIT_RECORD SET CLASSIFICATION = {cls} " +
                 $"WHERE VEHICLE_NUM = '{vehicleNum}' AND EXIT_DATE IS NULL";
             MySqlCommand cmd = new MySqlCommand(query , Conn);
             try { cmd.ExecuteNonQuery(); }
-            catch(Exception ex) { Console.WriteLine("Update_classfication" + ex.Message); }
+            catch(Exception ex) { Console.WriteLine("Update_classification" + ex.Message); }
         }
 
         //  출차하지 않은 차량의 입차 일시, 차량 구분 조회
