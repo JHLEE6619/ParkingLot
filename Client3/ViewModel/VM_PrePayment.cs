@@ -35,14 +35,14 @@ namespace Client3.ViewModel
         {
             Network = new Network();
             Show_fee = new Command(Send_vehicleNum);
-            Payment = new Command(Update_classification);
+            Payment = new Command(Prepayment);
         }
 
         public void Send_vehicleNum()
         {
             Send_msg msg = new()
             {
-                MsgId = (byte)Network.MsgId.PAYMENT,
+                MsgId = (byte)Network.MsgId.ENTRY_RECORD,
                 Record = this.Record
             };
             byte[] buf = Network.Serialize_to_json(msg);
@@ -56,12 +56,12 @@ namespace Client3.ViewModel
             Record.TotalFee = rcv_msg.Record.TotalFee;
         }
 
-        public void Update_classification()
+        public void Prepayment()
         {
             Record.Classification = 1;
             Send_msg msg = new()
             {
-                MsgId = (byte)Network.MsgId.UPDATE_CLASSIFICATION,
+                MsgId = (byte)Network.MsgId.PREPAYMENT,
                 Record = this.Record
             };
             byte[] buf = Network.Serialize_to_json(msg);

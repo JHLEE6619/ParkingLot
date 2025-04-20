@@ -23,7 +23,12 @@ namespace Client4.View
         public Payment()
         {
             InitializeComponent();
-            Thread.Sleep(3000);
+            Navigate();
+        }
+
+        public async Task Navigate()
+        {
+            await Task.Delay(2000);
             GoodBye goodBye = new();
             this.NavigationService.Navigate(goodBye);
         }

@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
+using Client4.ViewModel;
 
 namespace Client4.View
 {
@@ -23,9 +25,13 @@ namespace Client4.View
         public GoodBye()
         {
             InitializeComponent();
-            Thread.Sleep(3000);
-            Main main = new();
-            this.NavigationService.Navigate(main);
+            Navigate();
+        }
+
+        public async Task Navigate()
+        {
+            await Task.Delay(2000);
+            this.NavigationService.Navigate(Network.main);
         }
     }
 }

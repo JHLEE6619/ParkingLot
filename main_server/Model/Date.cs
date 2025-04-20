@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +29,14 @@ namespace Server.Model
         {
             string dateForamt = "MM월 dd일 HH시 mm분";
             return dateTime.ToString(dateForamt);
+        }
+
+        public DateTime Str_to_date(string dateString)
+        {
+            string format = "MM월 dd일 HH시 mm분";
+            CultureInfo provider = CultureInfo.InvariantCulture;
+
+            return DateTime.ParseExact(dateString, format, provider);
         }
     }
 }

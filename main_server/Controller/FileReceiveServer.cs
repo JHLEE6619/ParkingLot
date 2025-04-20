@@ -176,9 +176,15 @@ namespace Server.Controller
                 Send_msg exit_msg = exit_vehicleNum(vehicleNum);
                 Send_messageAsync(exit_msg, Program.Clients[1]);
                 send_msg = Show_paymentInfo(vehicleNum);
+                DateTime exitDate;
+                int totalFee;
                 if (send_msg != null)
                 {
-                    //Send_messageAsync(send_msg, Program.Clients[4]); // 출차 차량 정보를 화면에 띄운다 -> 사전정산/정기등록 차량이면 결제화면 패스
+                    exitDate = Str_to_date(send_msg.Record.ExitDate);
+                    totalFee = int.Parse(send_msg.Record.TotalFee.Replace("원", ""));
+                    Dbc.Update_exitRecord(send_msg.Record.VehicleNum, exitDate, totalFee);
+
+                    Send_messageAsync(send_msg, Program.Clients[4]); // 출차 차량 정보를 화면에 띄운다 -> 사전정산/정기등록 차량이면 결제화면 패스
                 }
             }
         }
@@ -228,8 +234,6 @@ namespace Server.Controller
             int totalFee = Cal_totalFee(parkingTime);
             if (totalFee <= 0) return null;
             string total_fee = totalFee.ToString() + "원";
-            // 같은 시점에서 업데이트하면 안되고, 결제하는 시점으로 바뀌어야함
-            Dbc.Update_exitRecord(vehicleNum, now, totalFee);
             Send_msg send_msg = new()
             {
                 MsgId = (byte)MsgId.PAYMENT,
@@ -273,6 +277,11 @@ namespace Server.Controller
 
         private async Task Send_messageAsync(Send_msg msg, NetworkStream stream)
         {
+            if(msg == null || stream == null)
+            {
+                Console.WriteLine("파일 전송 서버 : msg 또는 stream이 null입니다.");
+                return;
+            }
             string json = JsonConvert.SerializeObject(msg);
             byte[] buf = Encoding.UTF8.GetBytes(json);
             await stream.WriteAsync(buf).ConfigureAwait(false);

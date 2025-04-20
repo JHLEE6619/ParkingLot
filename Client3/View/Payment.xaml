@@ -9,7 +9,7 @@
       Title="Payment">
 
     <Grid Background="White">
-        <Image Source="/View/Card.jpg" Margin="60,170,60,50"/>
+        <Image x:Name="Img_card" Source="/View/Card.jpg" Margin="60,170,60,50" MouseLeftButtonDown="img_click"/>
         <TextBlock FontSize="32" FontWeight="Bold" TextAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,70,0,0"><Run Text="카드를 IC 방향으로"/><LineBreak/><Run Text="삽입해 주세요"/></TextBlock>
     </Grid>
 </Page>

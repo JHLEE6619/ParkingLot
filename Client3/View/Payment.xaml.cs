@@ -24,5 +24,11 @@ namespace Client3.View
         {
             InitializeComponent();
         }
+
+        private void img_click(object sender, MouseButtonEventArgs e)
+        {
+            Main main = new Main();
+            this.NavigationService.Navigate(main);
+        }
     }
 }

@@ -47,8 +47,6 @@
             <ComboBox x:Name="Combox_regDate" ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" Grid.Row="7" Grid.ColumnSpan="2" Width="310" Height="30" FontSize="18" HorizontalAlignment="Left"
                     VerticalAlignment="Center" Margin="20,0,0,0" SelectionChanged="Combox_select">
             </ComboBox>
-            <TextBlock Text="{Binding User.Fee}" Grid.Row="8" FontSize="18" FontWeight="bold" HorizontalAlignment="Right"
-                    VerticalAlignment="Center" Margin="0,0,20,0" TextWrapping="Wrap" />
             <Button Command="{Binding Registration}" x:Name="Btn_Payment" Visibility="Collapsed" Grid.Column="1" Grid.Row="8" Content="결제하기" FontSize="18"
                 HorizontalAlignment="Left" VerticalAlignment="Center" Width="80" Height="30" Margin="20,0,0,0" Click="Btn_Payment_Click" />
         </Grid>

@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using MySqlConnector;
 using Server.Model;
 using Newtonsoft.Json;
+using System.IO;
 
 namespace Server.Controller
 {
@@ -17,7 +18,7 @@ namespace Server.Controller
         public DBC Dbc {get;set;}
         public enum MsgId
         {
-            ENTRY_RECORD, PAYMENT, REGISTRATION, PERIOD_EXTENSION, UPDATE_CLASSIFICATION
+            ENTRY_RECORD, PAYMENT, REGISTRATION, PERIOD_EXTENSION, PREPAYMENT, UPDATE_CLASSIFICATION = 8
         }
 
         public async Task StartMainServer()
@@ -54,35 +55,50 @@ namespace Server.Controller
 
         private void handler(Receive_msg rcv_msg, NetworkStream stream)
         {
-            Send_msg send_msg = new();
+            Send_msg send_msg = null;
+            DateTime exitDate;
+            int totalFee;
             switch (rcv_msg.MsgId)
             {
-                // 사전 / 출차 정산
+                // 사전 / 출차 정산 전
                 case (byte)MsgId.ENTRY_RECORD:
-                    send_msg = Show_entryRecord(rcv_msg);
-                    break;
-                // 사전 / 출차 정산
-                case (byte)MsgId.PAYMENT:
                     send_msg = Show_paymentInfo(rcv_msg);
+                    Send_messageAsync(send_msg, stream);
+                    break;
+                //  출차 정산 후
+                case (byte)MsgId.PAYMENT:
+                    exitDate = Str_to_date(rcv_msg.Record.ExitDate);
+                    totalFee = int.Parse(rcv_msg.Record.TotalFee.Replace("원", ""));
+                    Dbc.Update_exitRecord(rcv_msg.Record.VehicleNum, exitDate, totalFee);
                     break;
                 case (byte)MsgId.REGISTRATION:
                     Dbc.Insert_regInfo(rcv_msg.User);
                     Dbc.Update_classification(rcv_msg.User.VehicleNum, 2);
+                    Update_classification(rcv_msg, 2);
                     break;
                 case (byte)MsgId.PERIOD_EXTENSION:
                     Dbc.Update_regInfo(rcv_msg.User);
                     break;
-                case (byte)MsgId.UPDATE_CLASSIFICATION:
+                // 사전정산 후
+                case (byte)MsgId.PREPAYMENT:
                     Dbc.Update_classification(rcv_msg.Record.VehicleNum, rcv_msg.Record.Classification);
+                    exitDate = Str_to_date(rcv_msg.Record.ExitDate);
+                    totalFee = int.Parse(rcv_msg.Record.TotalFee.Replace("원", ""));
+                    Dbc.Update_exitRecord(rcv_msg.Record.VehicleNum, exitDate, totalFee);
+                    Update_classification(rcv_msg, 1);
                     break;
 
             }
-            Send_messageAsync(send_msg, stream);
         }
 
 
         private async Task Send_messageAsync(Send_msg msg, NetworkStream stream)
         {
+            if (msg == null || stream == null)
+            {
+                Console.WriteLine("메인 서버 : 메세지 또는 stream이 null입니다.");
+                return;
+            }
             string json = JsonConvert.SerializeObject(msg);
             byte[] buf = Encoding.UTF8.GetBytes(json);
             await stream.WriteAsync(buf).ConfigureAwait(false);
@@ -119,8 +135,6 @@ namespace Server.Controller
             string parking_time = parkingTime + "분";
             int totalFee = Cal_totalFee(parkingTime);
             string total_fee = totalFee.ToString() + "원";
-            // 같은 시점에서 업데이트하면 안되고, 결제하는 시점으로 바뀌어야함
-            Dbc.Update_exitRecord(rcv_msg.Record.VehicleNum, now, totalFee);
             Send_msg send_msg = new()
             {
                 MsgId = (byte)MsgId.PAYMENT,
@@ -136,6 +150,21 @@ namespace Server.Controller
             };
 
             return send_msg;
+        }
+
+        private void Update_classification(Receive_msg rcv_msg, byte cls)
+        {
+            Send_msg msg = new()
+            {
+                MsgId = (byte)MsgId.UPDATE_CLASSIFICATION,
+                Record = new()
+                {
+                    VehicleNum = rcv_msg.Record.VehicleNum,
+                    Classification = cls
+                }
+            };
+
+            Send_messageAsync(msg, Program.Clients[1]);
         }
     }
 }

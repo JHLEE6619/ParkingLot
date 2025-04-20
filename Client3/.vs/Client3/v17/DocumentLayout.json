@@ -7,24 +7,24 @@
       "RelativeMoniker": "D:0:0:{C0CB6562-F516-45CC-A759-1E7FF75D3946}|Client3.csproj|solutionrelative:viewmodel\\vm_prepayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0CB6562-F516-45CC-A759-1E7FF75D3946}|Client3.csproj|c:\\users\\ljh49\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\parkinglot\\client3\\model\\record.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0CB6562-F516-45CC-A759-1E7FF75D3946}|Client3.csproj|solutionrelative:model\\record.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C0CB6562-F516-45CC-A759-1E7FF75D3946}|Client3.csproj|c:\\users\\ljh49\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\parkinglot\\client3\\viewmodel\\network.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0CB6562-F516-45CC-A759-1E7FF75D3946}|Client3.csproj|solutionrelative:viewmodel\\network.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C0CB6562-F516-45CC-A759-1E7FF75D3946}|Client3.csproj|c:\\users\\ljh49\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\parkinglot\\client3\\view\\prepayment.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C0CB6562-F516-45CC-A759-1E7FF75D3946}|Client3.csproj|solutionrelative:view\\prepayment.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0CB6562-F516-45CC-A759-1E7FF75D3946}|Client3.csproj|c:\\users\\ljh49\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\parkinglot\\client3\\view\\prepayment.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{C0CB6562-F516-45CC-A759-1E7FF75D3946}|Client3.csproj|solutionrelative:view\\prepayment.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{C0CB6562-F516-45CC-A759-1E7FF75D3946}|Client3.csproj|c:\\users\\ljh49\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\parkinglot\\client3\\view\\payment.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0CB6562-F516-45CC-A759-1E7FF75D3946}|Client3.csproj|solutionrelative:view\\payment.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0CB6562-F516-45CC-A759-1E7FF75D3946}|Client3.csproj|c:\\users\\ljh49\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\parkinglot\\client3\\viewmodel\\commands\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0CB6562-F516-45CC-A759-1E7FF75D3946}|Client3.csproj|solutionrelative:viewmodel\\commands\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C0CB6562-F516-45CC-A759-1E7FF75D3946}|Client3.csproj|c:\\users\\ljh49\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\parkinglot\\client3\\view\\payment.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C0CB6562-F516-45CC-A759-1E7FF75D3946}|Client3.csproj|solutionrelative:view\\payment.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0CB6562-F516-45CC-A759-1E7FF75D3946}|Client3.csproj|c:\\users\\ljh49\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\parkinglot\\client3\\view\\registration.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0CB6562-F516-45CC-A759-1E7FF75D3946}|Client3.csproj|solutionrelative:view\\registration.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0CB6562-F516-45CC-A759-1E7FF75D3946}|Client3.csproj|c:\\users\\ljh49\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\parkinglot\\client3\\viewmodel\\network.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0CB6562-F516-45CC-A759-1E7FF75D3946}|Client3.csproj|solutionrelative:viewmodel\\network.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,45 +34,57 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Payment.xaml",
+              "DocumentMoniker": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client3\\View\\Payment.xaml",
+              "RelativeDocumentMoniker": "View\\Payment.xaml",
+              "ToolTip": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client3\\View\\Payment.xaml",
+              "RelativeToolTip": "View\\Payment.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-20T11:13:40.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Network.cs",
-              "DocumentMoniker": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client3\\ViewModel\\Network.cs",
-              "RelativeDocumentMoniker": "ViewModel\\Network.cs",
-              "ToolTip": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client3\\ViewModel\\Network.cs",
-              "RelativeToolTip": "ViewModel\\Network.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAABYAAAAAAAAAA==",
+              "Title": "Payment.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client3\\View\\Payment.xaml.cs",
+              "RelativeDocumentMoniker": "View\\Payment.xaml.cs",
+              "ToolTip": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client3\\View\\Payment.xaml.cs",
+              "RelativeToolTip": "View\\Payment.xaml.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T23:41:32.767Z",
+              "WhenOpened": "2025-04-20T11:13:33.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Registration.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client3\\View\\Registration.xaml.cs",
+              "RelativeDocumentMoniker": "View\\Registration.xaml.cs",
+              "ToolTip": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client3\\View\\Registration.xaml.cs",
+              "RelativeToolTip": "View\\Registration.xaml.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T11:13:05.013Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Record.cs",
-              "DocumentMoniker": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client3\\Model\\Record.cs",
-              "RelativeDocumentMoniker": "Model\\Record.cs",
-              "ToolTip": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client3\\Model\\Record.cs",
-              "RelativeToolTip": "Model\\Record.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAD0AAAAlAAAAAAAAAA==",
+              "Title": "PrePayment.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client3\\View\\PrePayment.xaml.cs",
+              "RelativeDocumentMoniker": "View\\PrePayment.xaml.cs",
+              "ToolTip": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client3\\View\\PrePayment.xaml.cs",
+              "RelativeToolTip": "View\\PrePayment.xaml.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T23:33:24.668Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Command.cs",
-              "DocumentMoniker": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client3\\ViewModel\\Commands\\Command.cs",
-              "RelativeDocumentMoniker": "ViewModel\\Commands\\Command.cs",
-              "ToolTip": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client3\\ViewModel\\Commands\\Command.cs",
-              "RelativeToolTip": "ViewModel\\Commands\\Command.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T23:31:03.801Z",
+              "WhenOpened": "2025-04-20T11:13:00.944Z",
               "EditorCaption": ""
             },
             {
@@ -83,34 +95,22 @@
               "RelativeDocumentMoniker": "ViewModel\\VM_PrePayment.cs",
               "ToolTip": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client3\\ViewModel\\VM_PrePayment.cs",
               "RelativeToolTip": "ViewModel\\VM_PrePayment.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAEYAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAcwEQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T23:20:49.302Z",
+              "WhenOpened": "2025-04-20T11:05:08.231Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PrePayment.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client3\\View\\PrePayment.xaml.cs",
-              "RelativeDocumentMoniker": "View\\PrePayment.xaml.cs",
-              "ToolTip": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client3\\View\\PrePayment.xaml.cs",
-              "RelativeToolTip": "View\\PrePayment.xaml.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACIAAAAMAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "Network.cs",
+              "DocumentMoniker": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client3\\ViewModel\\Network.cs",
+              "RelativeDocumentMoniker": "ViewModel\\Network.cs",
+              "ToolTip": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client3\\ViewModel\\Network.cs",
+              "RelativeToolTip": "ViewModel\\Network.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAQwDUAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T23:20:47.359Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PrePayment.xaml",
-              "DocumentMoniker": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client3\\View\\PrePayment.xaml",
-              "RelativeDocumentMoniker": "View\\PrePayment.xaml",
-              "ToolTip": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client3\\View\\PrePayment.xaml",
-              "RelativeToolTip": "View\\PrePayment.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-19T23:20:25.131Z",
+              "WhenOpened": "2025-04-19T23:41:32.767Z",
               "EditorCaption": ""
             }
           ]

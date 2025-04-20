@@ -22,7 +22,7 @@ namespace Client1.ViewModel
 
         public enum MsgId
         {
-            ENTRY_RECORD, PAYMENT, REGISTRATION, PERIOD_EXTENSION, INIT_PARKING_LIST, ENTER_VEHICLE, EXIT_VEHICLE, SEAT_INFO
+            ENTRY_RECORD, PAYMENT, REGISTRATION, PERIOD_EXTENSION, INIT_PARKING_LIST, ENTER_VEHICLE, EXIT_VEHICLE, SEAT_INFO, UPDATE_CLASSIFICATION
         }
 
         public Network(MainWindow mainWindow, VM_Main vm_main, int port)
@@ -86,6 +86,9 @@ namespace Client1.ViewModel
                     break;
                 case (byte)MsgId.SEAT_INFO:
                     Update_seatInfo(msg);
+                    break;
+                case (byte)MsgId.UPDATE_CLASSIFICATION:
+                    Update_classification(msg);
                     break;
             }
         }
@@ -158,6 +161,19 @@ namespace Client1.ViewModel
                 deb += info;
             }
             System.Diagnostics.Debug.WriteLine(deb);
+        }
+
+        private void Update_classification(Receive_msg msg)
+        {
+            foreach (var record in VM_Main.Record)
+            {
+                if (record.VehicleNum == msg.Record.VehicleNum)
+                    MainWindow.Dispatcher.Invoke(() =>
+                    {
+                        record.Classification = msg.Record.Classification;
+                    });
+            }
+            System.Diagnostics.Debug.WriteLine("클래스 업데이트");
         }
     }
 }

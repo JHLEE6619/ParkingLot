@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +13,7 @@ namespace Client3.ViewModel
     public class VM_Registration
     {
         public User User { get; set; } = new();
-        public ObservableCollection<string> Items {  get; set; }
+        public ObservableCollection<string> Items { get; set; }
         public string SelectedItem { get; set; }
         public Command Registration;
         public Command PeriodExtension;

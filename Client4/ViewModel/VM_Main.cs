@@ -5,13 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Client1.Model;
+using Client4.Model;
+using Client4.ViewModel.Commands;
 
 namespace Client4.ViewModel
 {
     public class VM_Main : INotifyPropertyChanged
     {
         public Record _record = new();
-        Network Network { get; set; }
         public Record Record
         {
             get => _record;
@@ -21,16 +22,45 @@ namespace Client4.ViewModel
                 OnPropertyChanged(nameof(Record));
             }
         }
-        public VM_Main() 
+        private Network Network { get; set; }
+        public Command Payment_ { get; set; }
+        private string _btn_content = "결제 하기";
+        public string Btn_content
         {
-            Network = new Network(this);
-            Task.Run(() => Network.Receive_message());
+            get => _btn_content;
+            set
+            {
+                _btn_content = value;
+                OnPropertyChanged(nameof(Btn_content));
+            }
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;
+        private readonly object recordLock = new object();
         protected void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        public VM_Main() 
+        {
+            Network = new Network(this);
+            Payment_ = new(Payment);
+            Task.Run(() => Network.Receive_messageAsync());
+        }
+        
+        private void Payment()
+        {
+            lock (recordLock) 
+            {
+                Send_msg msg = new()
+                {
+                    MsgId = (byte)Network.MsgId.PAYMENT,
+                    Record = this.Record
+                };
+                Network.Send_messageAsync(msg);
+            }
+
         }
     }
 }

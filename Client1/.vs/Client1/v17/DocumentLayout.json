@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|c:\\users\\ljh49\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\parkinglot\\client1\\viewmodel\\network.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|solutionrelative:viewmodel\\network.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|c:\\users\\ljh49\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\parkinglot\\client1\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|c:\\users\\ljh49\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\parkinglot\\client1\\viewmodel\\vm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|solutionrelative:viewmodel\\vm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|c:\\users\\ljh49\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\parkinglot\\client1\\model\\send_msg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|solutionrelative:model\\send_msg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|c:\\users\\ljh49\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\parkinglot\\client1\\viewmodel\\commands\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|solutionrelative:viewmodel\\commands\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|c:\\users\\ljh49\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\parkinglot\\client1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|c:\\users\\ljh49\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\parkinglot\\client1\\viewmodel\\network.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|solutionrelative:viewmodel\\network.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|c:\\users\\ljh49\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\parkinglot\\client1\\viewmodel\\vm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|solutionrelative:viewmodel\\vm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|c:\\users\\ljh49\\onedrive\\\uBC14\uD0D5 \uD654\uBA74\\parkinglot\\client1\\model\\record.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6CE6186-1B63-4A3D-9AAA-BFB72E79E29D}|Client1.csproj|solutionrelative:model\\record.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,48 +42,90 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
+              "Title": "Send_msg.cs",
+              "DocumentMoniker": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client1\\Model\\Send_msg.cs",
+              "RelativeDocumentMoniker": "Model\\Send_msg.cs",
+              "ToolTip": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client1\\Model\\Send_msg.cs",
+              "RelativeToolTip": "Model\\Send_msg.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T07:39:21.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Command.cs",
+              "DocumentMoniker": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client1\\ViewModel\\Commands\\Command.cs",
+              "RelativeDocumentMoniker": "ViewModel\\Commands\\Command.cs",
+              "ToolTip": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client1\\ViewModel\\Commands\\Command.cs",
+              "RelativeToolTip": "ViewModel\\Commands\\Command.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T07:36:55.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Record.cs",
+              "DocumentMoniker": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client1\\Model\\Record.cs",
+              "RelativeDocumentMoniker": "Model\\Record.cs",
+              "ToolTip": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client1\\Model\\Record.cs",
+              "RelativeToolTip": "Model\\Record.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAEAAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T01:23:39.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Network.cs",
               "DocumentMoniker": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client1\\ViewModel\\Network.cs",
               "RelativeDocumentMoniker": "ViewModel\\Network.cs",
               "ToolTip": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client1\\ViewModel\\Network.cs",
               "RelativeToolTip": "ViewModel\\Network.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAIwB8AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAcwKUAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T06:42:57.686Z"
+              "WhenOpened": "2025-04-18T06:42:57.686Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "VM_Main.cs",
               "DocumentMoniker": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client1\\ViewModel\\VM_Main.cs",
               "RelativeDocumentMoniker": "ViewModel\\VM_Main.cs",
               "ToolTip": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client1\\ViewModel\\VM_Main.cs",
               "RelativeToolTip": "ViewModel\\VM_Main.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAA4AAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T01:09:24.734Z"
+              "WhenOpened": "2025-04-18T01:09:24.734Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client1\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
               "ToolTip": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client1\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-18T01:09:06.702Z"
+              "WhenOpened": "2025-04-18T01:09:06.702Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client1\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\ljh49\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\ParkingLot\\Client1\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAUwDYAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAcwCwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-10T08:14:56.683Z",
               "EditorCaption": ""

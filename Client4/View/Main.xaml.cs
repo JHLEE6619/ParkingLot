@@ -23,6 +23,7 @@ namespace Client4.View
     {
         public Main()
         {
+            Network.main = this;
             InitializeComponent();
         }
 

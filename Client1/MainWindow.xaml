@@ -38,7 +38,7 @@
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <ListView Margin="40,20,20,30" Grid.Row="1" ItemsSource="{Binding Record}">
+        <ListView Margin="40,60,20,30" Grid.Row="1" ItemsSource="{Binding Record}">
             <ListView.View>
                 <GridView>
                     <GridViewColumn DisplayMemberBinding="{Binding Path=VehicleNum}" Header="차량 번호" Width="160"/>
@@ -104,5 +104,6 @@
             <TextBox Style="{StaticResource Border}" Grid.Row="0" Grid.Column="4" Margin="0" Text="C2" TextWrapping="Wrap" FontSize="35" TextAlignment="Center" Background="{Binding Color[19]}"/>
             <TextBox Style="{StaticResource Border}" Grid.Row="0" Grid.Column="5" Margin="0" Text="C3" TextWrapping="Wrap" FontSize="35" TextAlignment="Center" Background="{Binding Color[20]}"/>
         </Grid>
+        <TextBlock FontSize="14" HorizontalAlignment="Right" Margin="0,30,20,0" Grid.Row="1" TextWrapping="Wrap" Text="[차량 구분] 0:일반 차량 , 1: 사전 정산 차량, 2: 정기 등록 차량 " VerticalAlignment="Top"/>
     </Grid>
 </Window>

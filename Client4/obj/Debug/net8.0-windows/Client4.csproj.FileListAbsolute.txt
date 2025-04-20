@@ -29,3 +29,36 @@ C:\Users\LMS\Desktop\ParkingLot\Client4\obj\Debug\net8.0-windows\refint\Client4.
 C:\Users\LMS\Desktop\ParkingLot\Client4\obj\Debug\net8.0-windows\Client4.pdb
 C:\Users\LMS\Desktop\ParkingLot\Client4\obj\Debug\net8.0-windows\Client4.genruntimeconfig.cache
 C:\Users\LMS\Desktop\ParkingLot\Client4\obj\Debug\net8.0-windows\ref\Client4.dll
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client4\bin\Debug\net8.0-windows\Client4.exe
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client4\bin\Debug\net8.0-windows\Client4.deps.json
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client4\bin\Debug\net8.0-windows\Client4.runtimeconfig.json
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client4\bin\Debug\net8.0-windows\Client4.dll
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client4\bin\Debug\net8.0-windows\Client4.pdb
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client4\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client4\obj\Debug\net8.0-windows\Client4.csproj.AssemblyReference.cache
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client4\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client4\obj\Debug\net8.0-windows\View\GoodBye.g.cs
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client4\obj\Debug\net8.0-windows\View\Main.g.cs
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client4\obj\Debug\net8.0-windows\View\Payment.g.cs
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client4\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client4\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client4\obj\Debug\net8.0-windows\Client4_MarkupCompile.cache
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client4\obj\Debug\net8.0-windows\Client4_MarkupCompile.lref
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client4\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client4\obj\Debug\net8.0-windows\View\GoodBye.baml
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client4\obj\Debug\net8.0-windows\View\Main.baml
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client4\obj\Debug\net8.0-windows\View\Payment.baml
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client4\obj\Debug\net8.0-windows\Client4.g.resources
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client4\obj\Debug\net8.0-windows\Client4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client4\obj\Debug\net8.0-windows\Client4.AssemblyInfoInputs.cache
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client4\obj\Debug\net8.0-windows\Client4.AssemblyInfo.cs
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client4\obj\Debug\net8.0-windows\Client4.csproj.CoreCompileInputs.cache
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client4\obj\Debug\net8.0-windows\Client4.sourcelink.json
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client4\obj\Debug\net8.0-windows\Client4.csproj.Up2Date
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client4\obj\Debug\net8.0-windows\Client4.dll
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client4\obj\Debug\net8.0-windows\refint\Client4.dll
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client4\obj\Debug\net8.0-windows\Client4.pdb
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client4\obj\Debug\net8.0-windows\Client4.genruntimeconfig.cache
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client4\obj\Debug\net8.0-windows\ref\Client4.dll
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client4\bin\Debug\net8.0-windows\View\Card.jpg
+C:\Users\ljh49\OneDrive\바탕 화면\ParkingLot\Client4\obj\Debug\net8.0-windows\Client4_Content.g.cs

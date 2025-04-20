@@ -24,12 +24,11 @@ namespace Client3.ViewModel
 
         public enum MsgId
         {
-            ENTRY_RECORD, PAYMENT, REGISTRATION, PERIOD_EXTENSION, UPDATE_CLASSIFICATION
+            ENTRY_RECORD, PAYMENT, REGISTRATION, PERIOD_EXTENSION, PREPAYMENT, UPDATE_CLASSIFICATION = 8
         }
 
         public byte[] Serialize_to_json(object msg)
         {
-
             string json = JsonConvert.SerializeObject(msg);
             byte[] buf = Encoding.UTF8.GetBytes(json);
             return buf;

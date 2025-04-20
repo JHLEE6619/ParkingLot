@@ -53,7 +53,7 @@ namespace Client4.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Client4;V1.0.0.0;component/view/goodbye.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Client4;component/view/goodbye.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\GoodBye.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -26,47 +26,40 @@
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
             <TextBlock Text="[차량 번호]" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
                 VerticalAlignment="Center" Margin="10,0,0,0" />
             <TextBlock Grid.Column="1" TextWrapping="Wrap" Height="30" FontSize="18" HorizontalAlignment="Left"
                 VerticalAlignment="Center" Margin="10,0,0,0"/>
-            <TextBlock Grid.Row="1" Text="[차량 구분]" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
+            <TextBlock Grid.Row="1" Text="[입차 일시]" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
                 VerticalAlignment="Center" Margin="10,0,0,0" />
-            <TextBlock Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" Height="30" FontSize="18" HorizontalAlignment="Left"
-                VerticalAlignment="Center" Margin="10,0,0,0"/>
-
-            <TextBlock Grid.Row="2" Text="[입차 일시]" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
+            <TextBlock Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
+                VerticalAlignment="Center" Margin="10,0,0,0" />
+            <TextBlock Grid.Row="2" Text="[출차 일시]" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
                 VerticalAlignment="Center" Margin="10,0,0,0" />
             <TextBlock Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
                 VerticalAlignment="Center" Margin="10,0,0,0" />
-            <TextBlock Grid.Row="3" Text="[출차 일시]" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
+            <TextBlock Grid.Row="3" Text="[주차 시간]" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
                 VerticalAlignment="Center" Margin="10,0,0,0" />
             <TextBlock Grid.Row="3" Grid.Column="1" TextWrapping="Wrap" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
-                VerticalAlignment="Center" Margin="10,0,0,0" />
-            <TextBlock Grid.Row="4" Text="[주차 시간]" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
+                VerticalAlignment="Center" Margin="20,0,0,0" />
+            <TextBlock Grid.Row="4" Text="[주차 요금]" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
                 VerticalAlignment="Center" Margin="10,0,0,0" />
             <TextBlock Grid.Row="4" Grid.Column="1" TextWrapping="Wrap" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
-                VerticalAlignment="Center" Margin="20,0,0,0" />
-            <TextBlock Grid.Row="5" Text="[주차 요금]" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
-                VerticalAlignment="Center" Margin="10,0,0,0" />
-            <TextBlock Grid.Row="5" Grid.Column="1" TextWrapping="Wrap" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
                 VerticalAlignment="Center" Margin="10,0,0,0" />
             <TextBlock Text="{Binding Record.VehicleNum, Mode=OneWay}" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
                 VerticalAlignment="Center" Margin="20,0,0,0" Grid.Column="1" Width="187" />
-            <TextBlock Text="{Binding Record.Classification, Mode=OneWay}" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
-                VerticalAlignment="Center" Margin="20,0,0,0" Grid.Column="1" Grid.Row="1" Width="187" />
             <TextBlock Text="{Binding Record.EntryDate, Mode=OneWay}" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
-                VerticalAlignment="Center" Margin="20,0,0,0" Grid.Column="1" Grid.Row="2" Width="187" />
+                VerticalAlignment="Center" Margin="20,0,0,0" Grid.Column="1" Grid.Row="1" Width="187" />
             <TextBlock Text="{Binding Record.ExitDate, Mode=OneWay}" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
-                VerticalAlignment="Center" Margin="20,0,0,0" Grid.Column="1" Grid.Row="3" Width="187" />
+                VerticalAlignment="Center" Margin="20,0,0,0" Grid.Column="1" Grid.Row="2" Width="187" />
             <TextBlock Text="{Binding Record.ParkingTime, Mode=OneWay}" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
-                VerticalAlignment="Center" Margin="20,0,0,0" Grid.Column="1" Grid.Row="4" Width="187" />
+                VerticalAlignment="Center" Margin="20,0,0,0" Grid.Column="1" Grid.Row="3" Width="187" />
             <TextBlock Text="{Binding Record.TotalFee, Mode=OneWay}" FontSize="18" FontWeight="bold" HorizontalAlignment="Left"
                 VerticalAlignment="Center" Margin="20,0,0,0" Grid.Column="1" Grid.Row="4" Width="187" />
             
         </Grid>
-        <Button x:Name="Btn_payment" FontSize="18" FontWeight="Bold" Width="340" Height="40" Content="결제하기" HorizontalAlignment="Center" Margin="0,330,0,0" VerticalAlignment="Top" Click="Btn_payment_Click"/>
+        <Button x:Name="Btn_payment" FontSize="18" FontWeight="Bold" Width="340" Height="40" Content="{Binding Btn_content}" HorizontalAlignment="Center" Margin="0,300,0,0" VerticalAlignment="Top" Click="Btn_payment_Click"
+                Command="{Binding Payment_}"/>
     </Grid>
 </Page>
